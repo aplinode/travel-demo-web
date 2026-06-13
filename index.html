@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AL-MUSAFIR | Luxury Travel Pakistan</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline-variant": "#c4c6cf",
+                        "primary-fixed-dim": "#afc8f0",
+                        "on-primary-fixed": "#001c3a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#1d1f1f",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d4e3ff",
+                        "on-primary-container": "#6f88ad",
+                        "on-surface-variant": "#43474e",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#574500",
+                        "secondary": "#735c00",
+                        "inverse-surface": "#313030",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#745c00",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary-fixed": "#ffe088",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container": "#f0eded",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed65b",
+                        "on-surface": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "inverse-primary": "#afc8f0",
+                        "on-error": "#ffffff",
+                        "outline": "#74777f",
+                        "surface-tint": "#476083",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-container": "#858687",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-container": "#001f3f",
+                        "tertiary": "#050606",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "primary": "#000613"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "display-sm": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-sm": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .luxury-gold-border {
+            border-top: 2px solid #D4AF37;
+        }
+
+        .luxury-gold-border-left {
+            border-left: 2px solid #D4AF37;
+        }
+
+        .btn-primary-hover:hover {
+            box-shadow: inset 0 -2px 0 0 #D4AF37;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 31, 63, 0.4), rgba(0, 31, 63, 0.4));
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container">
+    <!-- TopNavBar -->
+    <header
+        class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto z-50 bg-surface/95 backdrop-blur-md sticky top-0 docked full-width border-b border-primary dark:border-outline-variant shadow-sm dark:shadow-none">
+        <div class="font-display-sm text-display-sm font-bold text-primary dark:text-inverse-primary tracking-tight">
+            AL-MUSAFIR</div>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-primary dark:text-inverse-primary border-b-2 border-secondary font-bold font-label-md text-label-md py-2"
+                href="#">Destinations</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md py-2 transition-colors duration-300"
+                href="#">Packages</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md py-2 transition-colors duration-300"
+                href="#">Transport</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md py-2 transition-colors duration-300"
+                href="#">Hotels</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md py-2 transition-colors duration-300"
+                href="#">Gallery</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md py-2 transition-colors duration-300"
+                href="#">Contact</a>
+        </nav>
+        <button
+            class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3 btn-primary-hover transition-all duration-300">Book
+            A Tour</button>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover"
+                    data-alt="A majestic, high-altitude landscape of the Karakoram mountain range in Northern Pakistan. The snow-capped peaks of Rakaposhi tower under a crisp, clear sapphire sky. The foreground shows a group of distinguished men in tailored adventure gear observing the horizon. The lighting is bright and ethereal, emphasizing the pristine luxury and grand scale of the glacial valley. The atmosphere is silent, regal, and awe-inspiring, mirroring a premium travel brand identity."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1s_hb9NdVN5rOsjOSRJO4K3Q2hsiM6Y3PP-YOyKqQ5bOERMl7YU2RovfKwvxIN0tqiFyHcd0ybsgRxE7Va0llJxQWS_FP-zTxSgDzTLpzARp8Ec7j73iMAMc2beIjFYYkdAJwEoSbtNm7E8-yOxqrN0JRNjew1YISpJVMUdJ1-DcyaOgoJ_LFWRz_oXl-VFzc2r9DpkFKqjfgwYKgEZeWc3lip7c2zSrTenrKNQweFjbKLrJBhKzUsXXuD6-acZW3IRSBRJRFvfo" />
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            <div class="relative z-10 text-center text-on-primary max-w-4xl px-margin-mobile">
+                <h1 class="font-display-lg text-display-lg mb-6 leading-tight">Explore Extraordinary Destinations With
+                    Confidence</h1>
+                <p class="font-body-lg text-body-lg mb-10 opacity-90">Premium travel experiences designed for comfort,
+                    adventure, and unforgettable memories.</p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center">
+                    <button
+                        class="bg-primary-container text-on-primary px-10 py-4 font-label-md text-label-md transition-all hover:translate-y-[-2px] btn-primary-hover">Explore
+                        Tours</button>
+                    <button
+                        class="border border-secondary text-on-primary px-10 py-4 font-label-md text-label-md transition-all hover:bg-secondary/10">Contact
+                        Us</button>
+                </div>
+            </div>
+        </section>
+        <!-- Statistics -->
+        <section class="py-20 bg-surface">
+            <div
+                class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+                <div class="space-y-2 group">
+                    <div class="font-display-sm text-display-sm text-primary tracking-tighter" id="stat-tours">500+
+                    </div>
+                    <div class="font-label-md text-label-md text-outline tracking-widest">TOURS ORGANIZED</div>
+                </div>
+                <div class="space-y-2 group">
+                    <div class="font-display-sm text-display-sm text-primary tracking-tighter" id="stat-travelers">10k+
+                    </div>
+                    <div class="font-label-md text-label-md text-outline tracking-widest">HAPPY TRAVELERS</div>
+                </div>
+                <div class="space-y-2 group">
+                    <div class="font-display-sm text-display-sm text-primary tracking-tighter" id="stat-destinations">
+                        50+</div>
+                    <div class="font-label-md text-label-md text-outline tracking-widest">DESTINATIONS</div>
+                </div>
+                <div class="space-y-2 group">
+                    <div class="font-display-sm text-display-sm text-primary tracking-tighter" id="stat-experience">15+
+                    </div>
+                    <div class="font-label-md text-label-md text-outline tracking-widest">YEARS EXPERIENCE</div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Destinations (Bento Style) -->
+        <section class="py-24 bg-surface-container-lowest">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="mb-16">
+                    <h2 class="font-display-sm text-display-sm text-primary mb-4">Curated Destinations</h2>
+                    <div class="w-16 h-1 bg-secondary"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
+                    <div class="md:col-span-8 relative group overflow-hidden border border-outline-variant">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="An expansive panoramic view of the Hunza Valley in Pakistan during autumn. Golden-leafed trees frame the base of rugged, high-contrast mountain peaks. A single, traditional stone structure sits precisely in the middle ground, symbolizing heritage and quiet majesty. The lighting is warm and late-afternoon, casting long, soft shadows. The overall aesthetic is one of minimalist luxury and historical depth."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpKYeGOIOTXjgabnE188wgfq-QtCMIcgcpggAJU4vD4OTqqwUtaSPP0MHjgCkEh7itdb5tSYFqqtKhnjjEnHD_aq2urOzciwC7Y0ifKUBy6PRr3ib4HQeNYCxjeISPKhiw5lWfUVlz90PV6C8Dvbj3g7g8mBagnGMWMhhZLpXM-XDe_RnJz19dI_487olBqdHvAcFGsIZ7XhXFvgT_4RW7J6R5pv13EI58csvJ9rKJAnt5b85qqnLlamRQHEl3CLMkLVFmeg1oq74" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent p-8 flex flex-col justify-end">
+                            <h3 class="text-on-primary font-headline-lg text-headline-lg">Northern Areas</h3>
+                            <p class="text-on-primary/80 font-body-md text-body-md mt-2">The pinnacle of peak adventure
+                                and serene landscapes.</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 grid grid-rows-2 gap-gutter">
+                        <div class="relative group overflow-hidden border border-outline-variant">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                data-alt="Detail of intricate Islamic geometric patterns carved into ancient marble walls of a historical site in Lahore. The architecture is grand and symmetrical, bathed in soft, neutral morning light. No people are present, focusing purely on the mathematical beauty and craftsmanship of the heritage site. The color palette is composed of off-whites, greys, and subtle shadows."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCspaMZFzCG0vreGxEg8URkfflmh8kMoXw5oh58ayYerE4erICgz5ldsxdhRkVWRGgNBnrYuWSSmiZxmqtifPKK5eWre4HYU9OScJtcQyq53HGo3LO9QTuJsXbgpuzk2bVs5acm4KJWNhp6A5mJ3eUURc5PCbN6zWkVMEUIAiciCqgGjwvo-ODQ6twr6pJ8OiaUGd7YTunz9cyHy31hhzW0iMDe5rFC0SDC9R2MG1SLibnwe6BNNZseBHCVBiZPBJOE9XnuJJyCKF0" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent p-6 flex flex-col justify-end">
+                                <h3 class="text-on-primary font-headline-lg text-headline-lg">Historical Sites</h3>
+                            </div>
+                        </div>
+                        <div class="relative group overflow-hidden border border-outline-variant">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                data-alt="A premium executive boardroom overlook in a modern Karachi skyscraper. The setting is high-end and corporate, with sleek dark wood tables and minimalist leather chairs. The view through floor-to-ceiling windows shows a clean, organized city skyline at dusk. The lighting is sophisticated and low-key, emphasizing a professional and authoritative atmosphere for corporate travel."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo1WIhbL5SAqz17PArIP3nikWPeYVYGegku2a0aI8_MjB5NUW4hs0liwZIhwbuuypjwrU14ma8cK3HrqV3apHvlaY7YBwidyjpP_cs4OdWLdWKhB8oGo6tvEstcPU2Csb3SMC4r_Y0rYDq9GKMMe8Mcsjizt9tF9g4z-VmnCmMWPgy2VJYM4vNV1ZRdYOyhligg71E9CpMS37tO-9SM9dPc7wMhU1uuIPeZ9dhyX43N8JSjDNvLnppB3kt9tijYnRtIUWQH8L37Hw" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent p-6 flex flex-col justify-end">
+                                <h3 class="text-on-primary font-headline-lg text-headline-lg">Corporate Travel</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us -->
+        <section class="py-24 bg-primary text-on-primary overflow-hidden relative">
+            <div
+                class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-display-sm text-display-sm mb-12">The Al-Musafir Standard</h2>
+                    <div class="space-y-10">
+                        <div class="flex gap-6 luxury-gold-border-left pl-6">
+                            <span class="material-symbols-outlined text-secondary text-4xl">travel_explore</span>
+                            <div>
+                                <h4 class="font-headline-lg text-headline-lg mb-2">Professional Planning</h4>
+                                <p class="opacity-70">Meticulous itineraries crafted by travel experts for a seamless
+                                    experience.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 luxury-gold-border-left pl-6">
+                            <span class="material-symbols-outlined text-secondary text-4xl">verified_user</span>
+                            <div>
+                                <h4 class="font-headline-lg text-headline-lg mb-2">Trusted Service</h4>
+                                <p class="opacity-70">Over 15 years of delivering excellence to the most discerning
+                                    travelers.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 luxury-gold-border-left pl-6">
+                            <span
+                                class="material-symbols-outlined text-secondary text-4xl">airline_seat_recline_extra</span>
+                            <div>
+                                <h4 class="font-headline-lg text-headline-lg mb-2">Comfortable Travel</h4>
+                                <p class="opacity-70">Luxury fleets and premium accommodations ensured at every
+                                    destination.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-[600px] border border-secondary/30">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A professional male guide in formal outdoor attire standing before a vast valley in the Karakoram range. He is pointing towards the horizon with authority, illustrating the depth of local knowledge. The lighting is golden hour, casting a majestic glow on the guide and the landscape. The scene is quiet, focused, and exudes a sense of safe, expert-led exploration."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJj5JG54RgKh3jgKF_MlPJGWOMcyaZ-QizTCcurpXd8Wy44bAsW_RVlSbZSc1BVbVwsBfABtHdO-s3RSMfeFMi_XOPAbRwLAFUDZCctpshpxBzN9U56pMBWCYIUjycOdHgwARV_7x0C_07tqVBwyw2DRzT56BeWRxOj04IWn0799Y_tCEMqtNiuGlZPkwikM8k3PtHbHFKnBPuBpoMzPqqjgDa4Lk5h_9Clr2Qxoy5miG1ccq3uSaGPifguH3ODzqda2T3x6WPG5Y" />
+                    <div class="absolute bottom-8 left-8 glass-card p-6 border-l-4 border-secondary text-primary">
+                        <div class="font-display-sm text-display-sm">15+</div>
+                        <div class="font-label-md text-label-md">Years of Expertise</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Packages Section -->
+        <section class="py-24 bg-surface">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <h2 class="font-display-sm text-display-sm text-primary mb-4">Elite Packages</h2>
+                        <div class="w-16 h-1 bg-secondary"></div>
+                    </div>
+                    <div class="hidden md:flex gap-4">
+                        <button class="p-2 border border-outline-variant hover:border-secondary transition-colors"><span
+                                class="material-symbols-outlined">arrow_back</span></button>
+                        <button class="p-2 border border-outline-variant hover:border-secondary transition-colors"><span
+                                class="material-symbols-outlined">arrow_forward</span></button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <!-- Package Card 1 -->
+                    <div
+                        class="bg-white border border-outline-variant overflow-hidden group hover:shadow-xl transition-all duration-300">
+                        <div class="h-64 overflow-hidden relative">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="The iconic Shangrila Resort in Skardu, Pakistan. The heart-shaped lake reflects the surrounding majestic mountains and high-end wooden cottages. The lighting is soft and morning-fresh, creating a serene, paradise-like atmosphere. The composition is centered and balanced, emphasizing the exclusive and tranquil nature of this luxury destination."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3alFqHmst5OUu9s5C6FjV8HsCQFdWhtzuaFdiqRMtKHs42tr_hCg9aOUY8ei3wGAd8vc6_7GxpJKNDVIzzlok_ZIqAgIJSXSy7rwsH-nJcJ8F8uXGOlOJ-BLYe0cT4M3JkGlqNJSdLVt2XuhL0xs-G8ddlQncHd_yypX6lJ8YPxdqqgR1DzLuj6S8AYTmgO5Ux-ijvkaBMsLgP9zRLbJzjjHqlyXGAqLE6lkjNyuajL8SBiwxyrFx4rT-4LHkTs-pNukkbutlUHg" />
+                            <div
+                                class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 font-label-md text-label-md">
+                                7 DAYS</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="text-xs font-label-md px-2 py-1 bg-surface-container text-primary-container">NORTHERN
+                                    TOURS</span>
+                            </div>
+                            <h3 class="font-headline-lg text-headline-lg text-primary mb-2">Skardu Shangrila Retreat
+                            </h3>
+                            <p class="text-on-surface-variant mb-6">Experience the legendary heart-shaped lake and
+                                private mountain villas.</p>
+                            <div class="flex justify-between items-center pt-6 border-t border-outline-variant">
+                                <span class="font-display-sm text-primary text-2xl">PKR 185k</span>
+                                <button class="font-label-md text-label-md text-secondary hover:underline">VIEW
+                                    DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Package Card 2 -->
+                    <div
+                        class="bg-white border border-outline-variant overflow-hidden group hover:shadow-xl transition-all duration-300">
+                        <div class="h-64 overflow-hidden relative">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="The historic Altit Fort in Hunza Valley, showing the ancient stone walls and high-altitude architectural precision. The lighting is dramatic, with side-lighting emphasizing the texture of the old stone. The background features the snowy peaks of Ultar Sar. The mood is one of profound historical significance and enduring luxury."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBdpby-85I3SWsyLOjeg8m-isKMuEBJw-htytUZLw6ogglLN3BE-D_3dQeSIUF8OOrQ-389bsRIkcyRgNrJsV_F8Z4jMMzUsiuz1rbFTEhAPu9aLKAR6Xae-mIAve1C2WViCKJOYjydBBClBQpCz7p0jCsOfQKEYL2GDIytjfx2F7MKMQ5AH0nsSC4hLsTssNxQfLERs8cLAXwrSWZa6uFiwXLG8PE0cO6_4JPsI8tu-B3Qsx8MCF7kMxVvsRBv9YYc4vLGIwGQOU" />
+                            <div
+                                class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 font-label-md text-label-md">
+                                5 DAYS</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="text-xs font-label-md px-2 py-1 bg-surface-container text-primary-container">HISTORICAL</span>
+                            </div>
+                            <h3 class="font-headline-lg text-headline-lg text-primary mb-2">Royal Hunza Heritage</h3>
+                            <p class="text-on-surface-variant mb-6">Walk through the paths of kings in the ancient forts
+                                of Altit and Baltit.</p>
+                            <div class="flex justify-between items-center pt-6 border-t border-outline-variant">
+                                <span class="font-display-sm text-primary text-2xl">PKR 145k</span>
+                                <button class="font-label-md text-label-md text-secondary hover:underline">VIEW
+                                    DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Package Card 3 -->
+                    <div
+                        class="bg-white border border-outline-variant overflow-hidden group hover:shadow-xl transition-all duration-300">
+                        <div class="h-64 overflow-hidden relative">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="A high-end modern office interior in Islamabad with marble floors and golden accents. A group of professional men in dark business suits are engaged in a meeting, representing the corporate travel services. The lighting is crisp and clear. The atmosphere is highly professional and focused on executive comfort and logistics."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjoAmjsAMa0o0bTWrBpebu9HTsQpbdqA0fsto9BwGJC7oAHneUoaCDbgr30jACQU6tMMr8eM9Lzp5NW6nwebzj7ymX2wDqEQiezXMQntbKUUtY9QV6DvNkeXPT9b38YSc9O-_NsHfgJKAYCpnASx78hcqJTD8xcPNj_XoCetZaCVxoLus1JuEiYibUl1Dx7IOx_r-qrhjCUqdEzS4k30qjkwigUaoQRBOUzpbbfuvfMNnfOlGGB67FwCXnCHDX_AS8HtP7zq3nXeM" />
+                            <div
+                                class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 font-label-md text-label-md">
+                                3 DAYS</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="text-xs font-label-md px-2 py-1 bg-surface-container text-primary-container">CORPORATE</span>
+                            </div>
+                            <h3 class="font-headline-lg text-headline-lg text-primary mb-2">Capital Executive Suite</h3>
+                            <p class="text-on-surface-variant mb-6">Seamless logistics and luxury accommodation for the
+                                modern business leader.</p>
+                            <div class="flex justify-between items-center pt-6 border-t border-outline-variant">
+                                <span class="font-display-sm text-primary text-2xl">PKR 95k</span>
+                                <button class="font-label-md text-label-md text-secondary hover:underline">VIEW
+                                    DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-24 bg-surface-container">
+            <div class="max-w-4xl mx-auto px-margin-mobile text-center">
+                <span class="material-symbols-outlined text-secondary text-5xl mb-8">format_quote</span>
+                <div class="min-h-[250px] flex flex-col justify-center" id="testimonial-slider">
+                    <p class="font-display-sm text-headline-lg text-primary italic mb-8 leading-relaxed">"The level of
+                        precision and luxury provided by Al-Musafir is unmatched in Pakistan. From the private transport
+                        to the choice of heritage hotels, every detail was perfect for our executive retreat."</p>
+                    <div>
+                        <div class="font-label-md text-label-md text-primary tracking-widest mb-1">MUHAMMAD HASSAN</div>
+                        <div class="text-outline text-sm">CEO, Indus Ventures</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section class="relative py-32 overflow-hidden bg-primary-container">
+            <div class="absolute inset-0 opacity-20">
+                <img class="w-full h-full object-cover"
+                    data-alt="A wide-angle landscape of the snow-covered Nanga Parbat mountain peak at sunrise. The sky is a gradient of gold and deep navy. The scene is pristine, empty, and monumental. The lighting creates a high-contrast silhouette against the morning sky, symbolizing new beginnings and extraordinary travel journeys."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmPmjUUV3fVtSdUBHQbAWGWFlh2qqST1FYvR6scemf3x0O243DFTYftmqUuCRiUD9NyU1LuXbyO3pA3mHIJcj-oMs9lVrU7u_-eni0UeReB55G3wV3VYRdbJJLT7xrBcpN6fs35CpxiqJDv1jo_ApKcviQuJH4inP8Y4ThEqaB3Wja0yEoJUKcfXIckF6HNrjBER4XwVrH3lsLEr0PuHoUsja0v-5jBsZ7QpTp7e3hd7r1oHVlB3DmbmTSh_TZZaMvlYCPquh1uhw" />
+            </div>
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-desktop text-center">
+                <h2 class="font-display-lg text-display-lg text-on-primary mb-8">Ready For Your Next Journey?</h2>
+                <p class="font-body-lg text-body-lg text-on-primary/80 mb-12 max-w-2xl mx-auto">Contact our concierge
+                    today to begin designing your bespoke travel itinerary across Pakistan.</p>
+                <button
+                    class="bg-secondary text-on-secondary px-12 py-5 font-label-md text-label-md hover:bg-secondary/90 transition-all shadow-xl">Book
+                    Now</button>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-primary dark:bg-tertiary-container text-on-primary dark:text-on-tertiary-container border-t-2 border-secondary">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+            <div class="space-y-6">
+                <div class="font-display-sm text-display-sm font-bold text-on-primary dark:text-on-tertiary-container">
+                    AL-MUSAFIR</div>
+                <p class="font-body-md text-body-md opacity-70">Luxury travel concierge specializing in premium
+                    experiences across the Silk Road and beyond.</p>
+            </div>
+            <div>
+                <h5 class="font-label-md text-label-md text-secondary-fixed mb-6 tracking-widest">QUICK LINKS</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed transition-all hover:translate-x-1 inline-block"
+                            href="#">About Us</a></li>
+                    <li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed transition-all hover:translate-x-1 inline-block"
+                            href="#">Destinations</a></li>
+                    <li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed transition-all hover:translate-x-1 inline-block"
+                            href="#">Privacy Policy</a></li>
+                    <li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed transition-all hover:translate-x-1 inline-block"
+                            href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-label-md text-label-md text-secondary-fixed mb-6 tracking-widest">CATEGORIES</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed transition-all hover:translate-x-1 inline-block"
+                            href="#">Northern Tours</a></li>
+                    <li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed transition-all hover:translate-x-1 inline-block"
+                            href="#">Corporate Retreats</a></li>
+                    <li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed transition-all hover:translate-x-1 inline-block"
+                            href="#">Religious Tours</a></li>
+                    <li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed transition-all hover:translate-x-1 inline-block"
+                            href="#">Family Packages</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-label-md text-label-md text-secondary-fixed mb-6 tracking-widest">CONTACT</h5>
+                <p class="font-body-md text-on-primary/80 mb-4">Level 12, Executive Plaza<br />Blue Area, Islamabad</p>
+                <p class="font-body-md text-on-primary/80">info@almusafir.com<br />+92 (51) 123 4567</p>
+            </div>
+        </div>
+        <div
+            class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-label-md text-label-md opacity-50">© 2024 Al-Musafir Luxury Travel. All Rights Reserved.</p>
+            <div class="flex gap-6">
+                <span
+                    class="material-symbols-outlined opacity-50 cursor-pointer hover:opacity-100 transition-opacity">face_nod</span>
+                <span
+                    class="material-symbols-outlined opacity-50 cursor-pointer hover:opacity-100 transition-opacity">public</span>
+                <span
+                    class="material-symbols-outlined opacity-50 cursor-pointer hover:opacity-100 transition-opacity">mail</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple counter animation
+        function animateCounter(id, target) {
+            const el = document.getElementById(id);
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    el.innerText = target + (id.includes('tours') || id.includes('destinations') || id.includes('experience') ? '+' : 'k+');
+                    clearInterval(timer);
+                } else {
+                    el.innerText = Math.floor(current) + (id.includes('tours') || id.includes('destinations') || id.includes('experience') ? '+' : 'k+');
+                }
+            }, 20);
+        }
+
+        // Observer for stats
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter('stat-tours', 500);
+                    animateCounter('stat-travelers', 10);
+                    animateCounter('stat-destinations', 50);
+                    animateCounter('stat-experience', 15);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.getElementById('stat-tours').parentElement.parentElement;
+        observer.observe(statsSection);
+
+        // Simple Testimonial Fade Interaction
+        const testimonials = [
+            { text: '"The level of precision and luxury provided by Al-Musafir is unmatched in Pakistan. From the private transport to the choice of heritage hotels, every detail was perfect for our executive retreat."', name: 'MUHAMMAD HASSAN', title: 'CEO, Indus Ventures' },
+            { text: '"Exploring the Karakoram with such expert guides made the journey both safe and enlightening. Truly a royal experience from start to finish."', name: 'AHMED QURESHI', title: 'Managing Director, Petro-Tech' },
+            { text: '"Meticulous planning and attention to cultural heritage. Their religious tour packages are respectful, comfortable, and deeply meaningful."', name: 'DR. OMAR KHAN', title: 'Cultural Historian' }
+        ];
+        let currentIdx = 0;
+        const slider = document.getElementById('testimonial-slider');
+
+        setInterval(() => {
+            slider.style.opacity = '0';
+            setTimeout(() => {
+                currentIdx = (currentIdx + 1) % testimonials.length;
+                slider.querySelector('p').innerText = testimonials[currentIdx].text;
+                slider.querySelector('.font-label-md').innerText = testimonials[currentIdx].name;
+                slider.querySelector('.text-outline').innerText = testimonials[currentIdx].title;
+                slider.style.opacity = '1';
+            }, 500);
+        }, 5000);
+        slider.style.transition = 'opacity 0.5s ease-in-out';
+    </script>
+</body>
+
+</html>

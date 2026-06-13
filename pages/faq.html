@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ | AL-MUSAFIR Luxury Travel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            opacity: 1;
+            padding-bottom: 24px;
+        }
+        .accordion-item.active .icon-rotate {
+            transform: rotate(180deg);
+        }
+        .gold-border-slide::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .gold-border-slide:hover::after {
+            width: 100%;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#f3f0ef",
+                      "outline-variant": "#c4c6cf",
+                      "primary-fixed-dim": "#afc8f0",
+                      "on-primary-fixed": "#001c3a",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#1d1f1f",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed": "#d4e3ff",
+                      "on-primary-container": "#6f88ad",
+                      "on-surface-variant": "#43474e",
+                      "background": "#fcf9f8",
+                      "on-secondary-fixed-variant": "#574500",
+                      "secondary": "#735c00",
+                      "inverse-surface": "#313030",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-container": "#745c00",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-container-low": "#f6f3f2",
+                      "secondary-fixed-dim": "#e9c349",
+                      "secondary-fixed": "#ffe088",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#241a00",
+                      "surface-container": "#f0eded",
+                      "surface-bright": "#fcf9f8",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#fed65b",
+                      "on-surface": "#1c1b1b",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed-variant": "#2f486a",
+                      "surface": "#fcf9f8",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-background": "#1c1b1b",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "inverse-primary": "#afc8f0",
+                      "on-error": "#ffffff",
+                      "outline": "#74777f",
+                      "surface-tint": "#476083",
+                      "surface-dim": "#dcd9d9",
+                      "on-tertiary-container": "#858687",
+                      "surface-container-highest": "#e5e2e1",
+                      "primary-container": "#001f3f",
+                      "tertiary": "#050606",
+                      "surface-variant": "#e5e2e1",
+                      "surface-container-high": "#eae7e7",
+                      "primary": "#000613"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "body-md": ["Montserrat"],
+                      "display-lg": ["Playfair Display"],
+                      "label-md": ["Montserrat"],
+                      "body-lg": ["Montserrat"],
+                      "display-sm": ["Playfair Display"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "headline-lg": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-sm": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/95 backdrop-blur-md sticky top-0 z-50 border-b border-primary/20 dark:border-outline-variant">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-sm text-display-sm font-bold text-primary dark:text-inverse-primary tracking-tight">
+                AL-MUSAFIR
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Destinations</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Packages</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Transport</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Hotels</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Gallery</a>
+<a class="text-primary border-b-2 border-secondary font-bold font-label-md text-label-md" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-3 font-label-md text-label-md uppercase tracking-widest relative overflow-hidden group">
+<span class="relative z-10">Book A Tour</span>
+<div class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#D4AF37] transition-all duration-300 group-hover:w-full"></div>
+</button>
+</nav>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[409px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-primary-container">
+
+<div class="absolute inset-0 bg-gradient-to-b from-primary-container/60 to-background"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-display-lg text-display-lg text-white mb-4">Concierge Support</h1>
+<p class="font-body-lg text-body-lg text-white/80 max-w-2xl mx-auto">Providing precise answers for the discerning traveler. Explore our frequently asked questions or connect with our private consultants.</p>
+</div>
+</section>
+<!-- Search Bar -->
+<section class="max-w-4xl mx-auto -mt-12 px-margin-mobile relative z-20">
+<div class="bg-white p-2 shadow-xl border border-outline-variant flex items-center">
+<span class="material-symbols-outlined px-4 text-outline" data-icon="search">search</span>
+<input class="w-full border-none focus:ring-0 text-body-md font-body-md py-4 placeholder:text-outline-variant" id="faqSearch" placeholder="Search by topic (e.g. 'Visa', 'Cancellation', 'Private Jet')" type="text"/>
+<button class="bg-primary text-on-primary px-8 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-primary/90 transition-colors">
+                    Search
+                </button>
+</div>
+</section>
+<!-- FAQ Content -->
+<section class="max-w-5xl mx-auto py-24 px-margin-mobile grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Category Navigation -->
+<aside class="lg:col-span-3 hidden lg:block">
+<div class="sticky top-32 space-y-4">
+<h3 class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-6">Categories</h3>
+<nav class="flex flex-col gap-2">
+<a class="group flex items-center gap-3 py-2 text-on-surface-variant hover:text-primary transition-all" href="#booking">
+<span class="w-2 h-2 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="font-label-md text-label-md">Booking Process</span>
+</a>
+<a class="group flex items-center gap-3 py-2 text-on-surface-variant hover:text-primary transition-all border-l-2 border-transparent" href="#cancellation">
+<span class="w-2 h-2 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="font-label-md text-label-md">Cancellation</span>
+</a>
+<a class="group flex items-center gap-3 py-2 text-on-surface-variant hover:text-primary transition-all" href="#travel-req">
+<span class="w-2 h-2 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="font-label-md text-label-md">Visa &amp; Travel</span>
+</a>
+<a class="group flex items-center gap-3 py-2 text-on-surface-variant hover:text-primary transition-all" href="#transport">
+<span class="w-2 h-2 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="font-label-md text-label-md">Transport</span>
+</a>
+<a class="group flex items-center gap-3 py-2 text-on-surface-variant hover:text-primary transition-all" href="#hotels">
+<span class="w-2 h-2 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="font-label-md text-label-md">Hotels</span>
+</a>
+</nav>
+</div>
+</aside>
+<!-- Accordions -->
+<div class="lg:col-span-9 space-y-16">
+<!-- Booking Section -->
+<div class="scroll-mt-32" id="booking">
+<h2 class="font-headline-lg text-headline-lg border-b border-outline-variant pb-4 mb-8 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_month">calendar_month</span>
+                        Booking Process
+                    </h2>
+<div class="space-y-4">
+<div class="accordion-item border-b border-outline-variant group" data-category="booking">
+<button class="w-full flex justify-between items-center py-6 text-left hover:bg-surface-container-low transition-colors px-4" onclick="toggleAccordion(this)">
+<span class="font-body-lg text-body-lg font-semibold pr-8">How do I secure a bespoke luxury itinerary?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-4">
+<p class="text-on-surface-variant leading-relaxed">Our booking process begins with a private consultation. Once your personalized itinerary is curated, a 30% deposit is required to secure premium logistics, private aviation slots, and exclusive hotel suites. The remaining balance is due 45 days prior to departure.</p>
+</div>
+</div>
+<div class="accordion-item border-b border-outline-variant group" data-category="booking">
+<button class="w-full flex justify-between items-center py-6 text-left hover:bg-surface-container-low transition-colors px-4" onclick="toggleAccordion(this)">
+<span class="font-body-lg text-body-lg font-semibold pr-8">Can I request specific dietary or cultural adjustments?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-4">
+<p class="text-on-surface-variant leading-relaxed">Absolutely. Al-Musafir prides itself on adherence to cultural sensitivities and individual needs. We specialize in Halal-certified dining, private prayer spaces, and gender-segregated activities upon request.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Cancellation Section -->
+<div class="scroll-mt-32" id="cancellation">
+<h2 class="font-headline-lg text-headline-lg border-b border-outline-variant pb-4 mb-8 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="cancel">cancel</span>
+                        Cancellation
+                    </h2>
+<div class="space-y-4">
+<div class="accordion-item border-b border-outline-variant group" data-category="cancellation">
+<button class="w-full flex justify-between items-center py-6 text-left hover:bg-surface-container-low transition-colors px-4" onclick="toggleAccordion(this)">
+<span class="font-body-lg text-body-lg font-semibold pr-8">What is your refund policy for high-season bookings?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-4">
+<p class="text-on-surface-variant leading-relaxed">During peak seasons, cancellations made more than 60 days before travel are eligible for a 75% refund. Cancellations within 30 days are non-refundable due to the pre-paid nature of private charters and elite accommodation blocks.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Visa/Travel Section -->
+<div class="scroll-mt-32" id="travel-req">
+<h2 class="font-headline-lg text-headline-lg border-b border-outline-variant pb-4 mb-8 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="language">language</span>
+                        Visa &amp; Travel Requirements
+                    </h2>
+<div class="space-y-4">
+<div class="accordion-item border-b border-outline-variant group" data-category="travel-req">
+<button class="w-full flex justify-between items-center py-6 text-left hover:bg-surface-container-low transition-colors px-4" onclick="toggleAccordion(this)">
+<span class="font-body-lg text-body-lg font-semibold pr-8">Do you provide visa processing for European destinations?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-4">
+<p class="text-on-surface-variant leading-relaxed">Our "Royal Passage" service includes comprehensive visa handling. Our concierges will collect your documentation via secure courier and manage the entire application process with relevant embassies on your behalf.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Transport Section -->
+<div class="scroll-mt-32" id="transport">
+<h2 class="font-headline-lg text-headline-lg border-b border-outline-variant pb-4 mb-8 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="flight">flight</span>
+                        Transport
+                    </h2>
+<div class="space-y-4">
+<div class="accordion-item border-b border-outline-variant group" data-category="transport">
+<button class="w-full flex justify-between items-center py-6 text-left hover:bg-surface-container-low transition-colors px-4" onclick="toggleAccordion(this)">
+<span class="font-body-lg text-body-lg font-semibold pr-8">What type of private aircraft do you utilize?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-4">
+<p class="text-on-surface-variant leading-relaxed">We partner with global elite carriers to provide access to Gulfstream G650, Bombardier Global 7500, and Airbus Corporate Jets. Each flight includes bespoke catering and dedicated flight attendants trained in high-net-worth hospitality.</p>
+</div>
+</div>
+<div class="accordion-item border-b border-outline-variant group" data-category="transport">
+<button class="w-full flex justify-between items-center py-6 text-left hover:bg-surface-container-low transition-colors px-4" onclick="toggleAccordion(this)">
+<span class="font-body-lg text-body-lg font-semibold pr-8">Are ground transfers private?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-4">
+<p class="text-on-surface-variant leading-relaxed">Every ground movement is facilitated by private, armored SUVs (upon request) or luxury sedans with professional chauffeurs. No shared transport is ever utilized in our signature itineraries.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hotels Section -->
+<div class="scroll-mt-32" id="hotels">
+<h2 class="font-headline-lg text-headline-lg border-b border-outline-variant pb-4 mb-8 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="hotel">hotel</span>
+                        Hotels
+                    </h2>
+<div class="space-y-4">
+<div class="accordion-item border-b border-outline-variant group" data-category="hotels">
+<button class="w-full flex justify-between items-center py-6 text-left hover:bg-surface-container-low transition-colors px-4" onclick="toggleAccordion(this)">
+<span class="font-body-lg text-body-lg font-semibold pr-8">How are hotels selected for the Al-Musafir collection?</span>
+<span class="material-symbols-outlined icon-rotate transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content px-4">
+<p class="text-on-surface-variant leading-relaxed">We select properties based on a "Palatial Standard"—evaluating architectural heritage, privacy levels, and the quality of their Presidential and Royal suites. Every hotel must offer 24/7 butler service and discreet entry points.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Still Have Questions -->
+<section class="bg-primary-container py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile text-center">
+<div class="inline-block p-4 border border-secondary/30 mb-8">
+<span class="material-symbols-outlined text-secondary text-5xl" data-icon="contact_support">contact_support</span>
+</div>
+<h2 class="font-display-sm text-display-sm text-white mb-6">Still have questions?</h2>
+<p class="text-white/70 font-body-lg text-body-lg mb-10 max-w-xl mx-auto">Our dedicated travel consultants are available 24/7 to provide personalized assistance for your specific needs.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<a class="bg-[#D4AF37] text-primary px-10 py-5 font-label-md text-label-md uppercase tracking-widest font-bold hover:bg-[#C4A027] transition-all" href="#">
+                        Contact Concierge
+                    </a>
+<a class="border border-[#D4AF37] text-[#D4AF37] px-10 py-5 font-label-md text-label-md uppercase tracking-widest hover:bg-[#D4AF37]/5 transition-all" href="#">
+                        Call Support
+                    </a>
+</div>
+</div>
+</section>
+<!-- Image Spotlight -->
+<section class="max-w-container-max mx-auto px-margin-mobile py-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="relative aspect-video overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious hotel lounge with tall ceilings, ornate gold detailing, and plush deep navy seating. The room is bathed in the soft, warm glow of elegant chandeliers, creating a tranquil and highly exclusive atmosphere. High-end materials like marble and polished wood are visible, reflecting a modern corporate yet minimalist luxury aesthetic. No people are present, emphasizing the architectural grandeur and quiet majesty of the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALwB0QvERknopSP83mvBe6PpQn9_ZWJREx-TNqKrpdaHFqz52RfdK23QGxS-57_0g5dUkYBQTympAZS2gXtbXcgsVYc4ybCHDCV67a6lMIV7TpL9psrY7gkfbG4Hya5vQoxvDzUA3lAu4m3kCbuJXOvrM4hydymOEjj-HLZuP8Kay0dJlQEpvKEX3qXmlxZsRHk0a6CKhi1R4OX148zv_8ZoTHUmme1whz0kHQFIiKC78RcwD49aMOG43pPkzjy4QqXiO_7mb-p6M"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="pl-0 md:pl-12">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-[0.3em]">Our Promise</span>
+<h2 class="font-display-sm text-display-sm my-6">Exclusivity Without Compromise</h2>
+<p class="text-on-surface-variant font-body-md text-body-md leading-relaxed mb-8">Every query is handled with the utmost discretion and precision. We understand that your time is your most valuable asset, and our support infrastructure is designed to honor that.</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-[1px] bg-secondary"></div>
+<span class="font-label-md text-label-md italic">Director of Guest Experiences</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-tertiary-container border-t-2 border-secondary py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-sm text-display-sm font-bold text-on-primary dark:text-on-tertiary-container mb-6">
+                    AL-MUSAFIR
+                </div>
+<p class="text-on-primary/70 font-body-md text-body-md mb-8">Redefining luxury travel through cultural heritage and unparalleled service.</p>
+</div>
+<div>
+<h4 class="text-on-primary font-label-md text-label-md uppercase tracking-widest mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">About Us</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Destinations</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Gallery</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-primary font-label-md text-label-md uppercase tracking-widest mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-secondary-fixed font-bold font-body-md text-body-md" href="#">FAQ</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Contact</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-primary font-label-md text-label-md uppercase tracking-widest mb-6">Newsletter</h4>
+<p class="text-on-primary/70 font-body-md text-body-md mb-4">Receive exclusive travel dossiers.</p>
+<div class="flex border-b border-on-primary/30 py-2">
+<input class="bg-transparent border-none text-on-primary placeholder:text-on-primary/40 focus:ring-0 w-full font-body-md" placeholder="Email Address" type="email"/>
+<button class="text-secondary-fixed hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-16 pt-8 border-t border-on-primary/10 text-center md:text-left">
+<span class="text-on-primary/50 text-label-md font-label-md">© 2024 Al-Musafir Luxury Travel. All Rights Reserved.</span>
+</div>
+</footer>
+<script>
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all items in the same section
+            const siblingItems = item.parentElement.querySelectorAll('.accordion-item');
+            siblingItems.forEach(sib => sib.classList.remove('active'));
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Live Search Logic
+        const searchInput = document.getElementById('faqSearch');
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('.accordion-item');
+            const sections = document.querySelectorAll('.scroll-mt-32');
+
+            items.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                if (text.includes(term)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Hide sections if no items match
+            sections.forEach(section => {
+                const visibleItems = section.querySelectorAll('.accordion-item[style="display: block;"]').length;
+                const matchesAlways = section.querySelectorAll('.accordion-item').length === 0; // fallback
+                if (visibleItems === 0 && term !== '') {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'block';
+                }
+            });
+        });
+
+        // Smooth category navigation active state
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.scroll-mt-32');
+            const navLinks = document.querySelectorAll('aside nav a');
+            
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                const dot = link.querySelector('span:first-child');
+                if (link.getAttribute('href').includes(current)) {
+                    dot.style.opacity = "1";
+                    link.classList.add('text-primary');
+                } else {
+                    dot.style.opacity = "0";
+                    link.classList.remove('text-primary');
+                }
+            });
+        });
+    </script>
+</body></html>

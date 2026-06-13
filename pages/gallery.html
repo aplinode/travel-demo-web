@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery | AL-MUSAFIR Luxury Travel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline-variant": "#c4c6cf",
+                        "primary-fixed-dim": "#afc8f0",
+                        "on-primary-fixed": "#001c3a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#1d1f1f",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d4e3ff",
+                        "on-primary-container": "#6f88ad",
+                        "on-surface-variant": "#43474e",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#574500",
+                        "secondary": "#735c00",
+                        "inverse-surface": "#313030",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#745c00",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary-fixed": "#ffe088",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container": "#f0eded",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed65b",
+                        "on-surface": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "inverse-primary": "#afc8f0",
+                        "on-error": "#ffffff",
+                        "outline": "#74777f",
+                        "surface-tint": "#476083",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-container": "#858687",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-container": "#001f3f",
+                        "tertiary": "#050606",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "primary": "#000613"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "display-sm": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-sm": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+
+        .gold-border-hover:hover {
+            border-color: #D4AF37 !important;
+        }
+
+        .filter-btn.active {
+            border-bottom: 2px solid #D4AF37;
+            color: #000613;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto z-50 bg-surface/95 backdrop-blur-md docked full-width top-0 sticky border-b border-primary shadow-sm">
+<div class="font-display-sm text-display-sm font-bold text-primary">AL-MUSAFIR</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Destinations</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Packages</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Transport</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Hotels</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-secondary font-bold transition-colors duration-300" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary px-6 py-3 font-label-md text-label-md tracking-widest hover:bg-opacity-90 transition-all border-b-0 hover:border-b-2 hover:border-[#D4AF37]">
+            Book A Tour
+        </button>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
+<!-- Header Section -->
+<section class="mb-16 text-center">
+<h1 class="font-display-lg text-display-lg mb-6 text-primary">Visual Chronicles</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                Explore the majestic landscapes and architectural wonders of the Kingdom through our curated collection of high-definition imagery.
+            </p>
+<!-- Filters -->
+<div class="flex flex-wrap justify-center gap-8 border-b border-outline-variant pb-4">
+<button class="filter-btn active font-label-md text-label-md text-on-surface-variant uppercase tracking-widest" data-filter="all">All Explorations</button>
+<button class="filter-btn font-label-md text-label-md text-on-surface-variant uppercase tracking-widest" data-filter="mountains">Mountains</button>
+<button class="filter-btn font-label-md text-label-md text-on-surface-variant uppercase tracking-widest" data-filter="historical">Historical</button>
+<button class="filter-btn font-label-md text-label-md text-on-surface-variant uppercase tracking-widest" data-filter="religious">Religious</button>
+<button class="filter-btn font-label-md text-label-md text-on-surface-variant uppercase tracking-widest" data-filter="transport">Transport</button>
+<button class="filter-btn font-label-md text-label-md text-on-surface-variant uppercase tracking-widest" data-filter="hotels">Hotels</button>
+</div>
+</section>
+<!-- Masonry Gallery -->
+<div class="masonry-grid" id="gallery-container">
+<!-- Item 1: Mountains -->
+<div class="masonry-item group cursor-pointer overflow-hidden border border-outline-variant gold-border-hover transition-all duration-500" data-category="mountains">
+<div class="relative overflow-hidden aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A breathtaking drone perspective of the Al-Ula mountain ranges at sunrise. The jagged sandstone peaks are bathed in soft amber light against a clear pale blue sky. The landscape is desolate yet majestic, emphasizing the immense scale of the Saudi Arabian desert topography in a high-end, minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOShz3-loikmIU3eKWTOkP__KYEwvf1oqtbYljm4sVFEal3CPl7afuBUzfozbe0bftTMyiaT7bDPXshRunyW12pSLf9VXccQXCkTeawbr82FQt5WDD-gICFNyFPy6RIh-4PEgfeVJsfRk97yNdDM3Yf5lhuCbNObA5fIc41CD5qYCul983NjgHMME3QKm5Yusp7HqOBlfx3lKzU0eg256va52jO-K0ohkyashA-eJYDh8oMSF1rtKZzLU0pvTFq-kyawV8sScD4eE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="font-label-md text-[10px] text-secondary uppercase tracking-widest mb-2">Mountains</span>
+<h3 class="font-headline-lg text-white">Al-Ula Canyons</h3>
+</div>
+</div>
+</div>
+<!-- Item 2: Historical -->
+<div class="masonry-item group cursor-pointer overflow-hidden border border-outline-variant gold-border-hover transition-all duration-500" data-category="historical">
+<div class="relative overflow-hidden aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A detailed architectural shot of Hegra's ancient Nabataean tombs carved into massive red sandstone boulders. The lighting is dramatic, with long shadows emphasizing the intricate geometric carvings and classical portals. The sky is a deep twilight indigo, creating a serene and historically significant atmosphere with no human presence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPwQWJPdbzzxH08P0fh_VB4cRbN5VuRzDrY6OE2Glw5hn36Yk7agHU-Y0XMggXrU8jjrEEOcxrZdfAUYN6fXL2m6qud3JngnQbYg48UjYAQqs43Wbz_77knLGQmJekN9S4jQGgrzkOlOJPe2BKvuzEeHXz_gdk3mDXMoI70K8TUM8s7M-3ZcIceCxLBpZ4xzxW1elXu6p-nAYXRRf5a0vDcup0WVL4117x3O0yGmBN3_Si2qb9PogNNde9QGi2IJTWo1eieJMA4Qc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="font-label-md text-[10px] text-secondary uppercase tracking-widest mb-2">Historical</span>
+<h3 class="font-headline-lg text-white">The Tombs of Hegra</h3>
+</div>
+</div>
+</div>
+<!-- Item 3: Religious -->
+<div class="masonry-item group cursor-pointer overflow-hidden border border-outline-variant gold-border-hover transition-all duration-500" data-category="religious">
+<div class="relative overflow-hidden aspect-[3/4]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An expansive, high-angle view of the Holy Mosque in Mecca during the quiet hours of the morning. The pristine white marble courtyard reflects the soft, diffused sunlight. The architecture is detailed with grand arches and towering minarets, captured in a clean, minimalist style that emphasizes peace, scale, and sacred geometry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvVqWUiz85ubUGv9heVnk1U9q4S3VSc0S10PA44y2MckkzD4Y9JiUyfJJS12ubhyzTZJ_q5KVMrQ0Tr4g5zChIbkOhEsSwdnNKu74FMp87UsGNfWWlrTom_APV3d3KhpvXMDrQQCxr6y9r6pY4xCDW6LS_gPIkgarTvqVHi2r6bg9ebe9VSiVp3qYOzR_i9JUFCaRLfofWdoBGq4ZhY9fCn0VDSsJvkVCptyolQSWdqOydYQbQ_f7dJJ6XQUo0veuO4xtvBvQhA8c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="font-label-md text-[10px] text-secondary uppercase tracking-widest mb-2">Religious</span>
+<h3 class="font-headline-lg text-white">Grand Mosque Sanctuary</h3>
+</div>
+</div>
+</div>
+<!-- Item 4: Transport -->
+<div class="masonry-item group cursor-pointer overflow-hidden border border-outline-variant gold-border-hover transition-all duration-500" data-category="transport">
+<div class="relative overflow-hidden aspect-[16/9]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A sleek, white private jet parked on a pristine tarmac at a private aviation terminal during the golden hour. The fuselage reflects the warm orange and pink hues of the sunset. The image is framed with cinematic symmetry, conveying a sense of exclusive, high-end travel and engineering excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR4jxRL6cAD7E-mzHhDPwHUPYm1GTjIfIkTboc3vNI3EawIIseGITmbxUQ0oQMi54zRvviFko1EtzUfplD2RdaZI646kX79eLw7Eg14hOIIGUcbvD6s0Vph7MWHBO6ZYTlvX9Qu5--OXuK_nf0YJ5N4snSsN-8vGhNKFSrrdyH_FzvTCIRVx-CACajTBn_z_ZvrjYU9t5JCyfFyuI3YnFmzueAG2XTde_mvL_ON_mKdIlULjs2n2nsvUlFG6kbKdrpspgmMOn4dKY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="font-label-md text-[10px] text-secondary uppercase tracking-widest mb-2">Transport</span>
+<h3 class="font-headline-lg text-white">Global Express Fleet</h3>
+</div>
+</div>
+</div>
+<!-- Item 5: Hotels -->
+<div class="masonry-item group cursor-pointer overflow-hidden border border-outline-variant gold-border-hover transition-all duration-500" data-category="hotels">
+<div class="relative overflow-hidden aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A luxurious hotel suite balcony overlooking the Red Sea. The interior features high-end minimalist design with white linens and dark wood accents. Outside, the water is a vibrant turquoise under a brilliant noon sun. The scene is devoid of people, focusing on the calm, opulent atmosphere of a high-net-worth coastal retreat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBICk8ycLAJDzYGyv2ITouceru4eQilPQRpQ2VGhKBI0vN8v1vGVthu6ogSLcTsf8yOP41A48ImjJEVgV8SxHQe2Xzu-3gn0CdxQolIF2YDiVqhgVjTlQ4TSlcBon4-H_Yqa5VMRzL3-VQ05XKC_CXgeAbxdSm5hbnWvbGot87lzw-vyUfqYKxOzw7k77MrVmy1LIQpSAhb9rWGfKeTO_SPrioUzgHh02M8j1OFYDHk9tyFlL64JgQ_XoJk7fo_z3MwnV7lR6-ScA4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="font-label-md text-[10px] text-secondary uppercase tracking-widest mb-2">Hotels</span>
+<h3 class="font-headline-lg text-white">The Ritz-Carlton Reserve</h3>
+</div>
+</div>
+</div>
+<!-- Item 6: Mountains -->
+<div class="masonry-item group cursor-pointer overflow-hidden border border-outline-variant gold-border-hover transition-all duration-500" data-category="mountains">
+<div class="relative overflow-hidden aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A dramatic mountain peak covered in light mist, captured with a telephoto lens to emphasize its jagged, vertical silhouette. The rock is a dark, weathered grey, providing a strong contrast to the soft white clouds swirling around its base. The composition is editorial and moody, highlighting the quiet majesty of nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgKMjYA6mF7xwo4qv4HyIn5CX286Vi0Wi5WUd5Q5Bw1Kn8ShGN356IxcjXgjXIGGF5g3cQOfCiLmoZGtZIVd3MMNfYm3aK0j2aukez22aFkWos0sghMQdJXfDg8bRWjcdMsO6C8LyTC5oXF8Dkpk-LzV6JVAl66C-aLSdYUVy8TMtLuw7q6GwXSK8HUOyEndnItTxDf8h2icYczw7LMgLOyRk4X5FBEVmjtNDnhYzIgMfk_LAUbzR7Ky-bcuDQayMaThbbleD1Og8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="font-label-md text-[10px] text-secondary uppercase tracking-widest mb-2">Mountains</span>
+<h3 class="font-headline-lg text-white">Sarawat Mist</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-20 flex justify-center">
+<button class="group flex items-center gap-4 px-12 py-5 border border-primary text-primary font-label-md text-label-md tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                DISCOVER MORE
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto border-t-2 border-secondary">
+<div class="space-y-6">
+<div class="font-display-sm text-display-sm font-bold text-on-primary">AL-MUSAFIR</div>
+<p class="font-body-md text-body-md text-on-primary/70 pr-8">
+                    Crafting peerless travel experiences for the discerning global citizen. Luxury, heritage, and precision in every journey.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest">Navigation</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 inline-block" href="#">About Us</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 inline-block" href="#">Destinations</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 inline-block" href="#">Packages</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 inline-block" href="#">Terms of Service</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 inline-block" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-on-primary/30 flex items-center justify-center hover:border-secondary-fixed transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 border border-on-primary/30 flex items-center justify-center hover:border-secondary-fixed transition-all" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+<a class="w-10 h-10 border border-on-primary/30 flex items-center justify-center hover:border-secondary-fixed transition-all" href="#">
+<span class="material-symbols-outlined text-sm">call</span>
+</a>
+</div>
+<div class="pt-4">
+<p class="font-label-md text-[10px] text-on-primary/50 uppercase tracking-[0.2em]">Headquarters</p>
+<p class="font-body-md text-body-md">Riyadh, Kingdom of Saudi Arabia</p>
+</div>
+</div>
+</div>
+<div class="py-8 text-center border-t border-on-primary/10 max-w-container-max mx-auto px-margin-desktop">
+<p class="font-label-md text-label-md text-on-primary/60">© 2024 Al-Musafir Luxury Travel. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple Gallery Filtering Logic
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.masonry-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button state
+                filterButtons.forEach(b => b.classList.remove('active', 'text-primary'));
+                btn.classList.add('active', 'text-primary');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+
+        // Simple entrance animation
+        window.addEventListener('load', () => {
+            galleryItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+                
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body></html>

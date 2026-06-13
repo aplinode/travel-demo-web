@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AL-MUSAFIR | Luxury Travel Blog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline-variant": "#c4c6cf",
+                        "primary-fixed-dim": "#afc8f0",
+                        "on-primary-fixed": "#001c3a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#1d1f1f",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d4e3ff",
+                        "on-primary-container": "#6f88ad",
+                        "on-surface-variant": "#43474e",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#574500",
+                        "secondary": "#735c00",
+                        "inverse-surface": "#313030",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#745c00",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary-fixed": "#ffe088",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container": "#f0eded",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed65b",
+                        "on-surface": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "inverse-primary": "#afc8f0",
+                        "on-error": "#ffffff",
+                        "outline": "#74777f",
+                        "surface-tint": "#476083",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-container": "#858687",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-container": "#001f3f",
+                        "tertiary": "#050606",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "primary": "#000613"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "display-sm": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-sm": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .active-nav-border { position: relative; }
+        .active-nav-border::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #D4AF37;
+        }
+        .luxury-card:hover {
+            transform: translateY(-4px);
+            border-color: #D4AF37;
+            box-shadow: 0px 10px 40px rgba(0, 31, 63, 0.05);
+        }
+        .btn-hover-effect:hover::after {
+            width: 100%;
+        }
+        .btn-hover-effect::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        input:focus {
+            outline: none;
+            border-bottom: 2px solid #D4AF37 !important;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container">
+<!-- Top Navigation Bar -->
+<header class="bg-surface/95 backdrop-blur-md border-b border-primary dark:border-outline-variant sticky top-0 z-50 shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-sm text-display-sm font-bold text-primary dark:text-inverse-primary tracking-tight">
+                AL-MUSAFIR
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Packages</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Transport</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Hotels</a>
+<a class="text-primary border-b-2 border-secondary font-bold font-label-md text-label-md" href="#">Gallery</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="relative bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3 transition-all active:opacity-80 btn-hover-effect overflow-hidden">
+                Book A Tour
+            </button>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Hero Section -->
+<section class="mb-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<div class="group relative overflow-hidden h-[500px]">
+<img alt="Featured Post" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide angle, cinematic shot of the Grand Mosque in Mecca during the golden hour. The architecture features intricate white marble and towering minarets against a soft orange and purple sky. The lighting is ethereal and high-end, focusing on the cultural majesty and spiritual serenity. The overall palette is white, gold, and deep twilight navy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPdHklb_FxRNclqR5BbVsZXqsAXpFetJkmtxz-3jyoIjCeJsUUyaBXdRFmF5RD4m3TMMHfxZfnWimZCnjRHR-QP0KYKVf6F6rcABkLkZnPz5cqo0DGS41E-NpXmpyq4QFnsqZTgbR2j0cLSC0Djx7dLADKwbkQXC8O1b_b0ymmcHYsybsQit0GeFKG0paiIWk9WELt-CUh_4EfoSkAMu3uB5D6GkjWSjTCVFB81F0zYtwocQfoim7yeI95VpSocQHgUPvaRCWDMt8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="inline-block bg-secondary text-on-secondary text-label-md font-label-md px-3 py-1 mb-4">FAITH &amp; TRADITION</span>
+<h1 class="text-on-primary font-display-sm text-display-sm mb-4 leading-tight">Hajj &amp; Umrah Preparation: A Soul's Practical Guide</h1>
+<p class="text-on-primary/80 font-body-lg text-body-lg max-w-2xl mb-6">Navigating the spiritual journey with excellence, from logistical precision to emotional readiness.</p>
+<a class="inline-flex items-center text-secondary-fixed font-label-md text-label-md group/link" href="#">
+                                READ ARTICLE 
+                                <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col justify-between">
+<div class="border-l-4 border-secondary pl-6 mb-12">
+<h2 class="font-display-sm text-display-sm text-primary mb-4">Discover the Essence</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Curated insights for the discerning traveler, blending cultural heritage with modern luxury standards.</p>
+</div>
+<div class="bg-surface-container-low p-8 border border-outline-variant">
+<h3 class="font-label-md text-label-md text-secondary mb-6 tracking-widest">SEARCH ARTICLES</h3>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-primary py-2 pr-10 font-body-md text-on-surface placeholder:text-on-surface-variant/50 focus:border-secondary transition-all" placeholder="Search destinations, topics..." type="text"/>
+<span class="material-symbols-outlined absolute right-0 top-2 text-primary">search</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories & Filter -->
+<section class="mb-16">
+<div class="flex flex-wrap gap-4 items-center border-b border-outline-variant pb-6">
+<span class="font-label-md text-label-md text-on-surface-variant mr-4">CATEGORIES:</span>
+<button class="px-4 py-2 bg-primary-container text-on-primary font-label-md text-label-md">ALL POSTS</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:border-secondary transition-colors">CULTURE</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:border-secondary transition-colors">HERITAGE</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:border-secondary transition-colors">BUSINESS</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:border-secondary transition-colors">LOGISTICS</button>
+</div>
+</section>
+<!-- Article Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-20">
+<!-- Article 1 -->
+<article class="luxury-card group border border-outline-variant bg-surface transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img alt="Article Image" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A luxurious interior of a private jet cabin, showing cream leather seats and polished mahogany tables. Through the window, snow-capped mountains of a northern region are visible under a bright, crisp blue sky. The lighting is soft and warm, creating an atmosphere of exclusive business travel. The design palette is navy, cream, and gold." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzoqZuLzkk1HwxEd4JXZ5Y5ND72ed6oTEg-pawUSWzpLGtpSAwITkJ2h2FSV4FRnmA_wFZyqD3ASthPUYx_iw2tJCZfEEn-n8mijUmbLRd-JwMDOZcXVoqhtgzV5ifa-FWwe2OahSq0ZQMA62rV0yYwjwcFnqCSjBx4s5lETc0zpgNiHXva1p1RkqS3kxrdjCa0ACfWcr0L0TdBtG8l-wQc2ktbjl1qDcriYaDPdy4qDESsM833OKd1uJYogAQ7iDRlOs0NwgFlQM"/>
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] font-label-md text-secondary border border-secondary px-2 py-0.5">NORTHERN TRAVEL</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4 leading-tight">Top 5 Northern Destinations for Private Retreats</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6 line-clamp-3">Discover the serene majesty of untouched northern landscapes, where isolation meets absolute luxury in bespoke lodges.</p>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant/30">
+<span class="text-on-surface-variant font-label-md text-[12px]">MARCH 12, 2024</span>
+<a class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" href="#">north_east</a>
+</div>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="luxury-card group border border-outline-variant bg-surface transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img alt="Article Image" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A minimalist, high-tech corporate office lounge overlooking a modern Middle Eastern skyline at dusk. Sleek glass partitions, designer furniture, and ambient warm lighting create a professional yet luxurious setting. The sky is a deep indigo, and the city lights are starting to twinkle. The overall feel is one of global connectivity and corporate sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCImSk9g_lpwvnAWVT5SpRiATPvvcyvEKGjSPK4_49ghNYOSD5y0GLkL68aZs2NTMXFOZ_chw_ec7Oh1amuLjsmPv5_XliQ8UgRXGe9ryOHWopz74eyYbwFW4ye_2buWYekrkdXnHjHk8AKU078Wp8NYY7wFV303EIuLVgPw4OenQPYeuB5ZN1mKYc47vQywq7rhubj0LgMY_cx8nOu96NaRlEPn3tAOxpN_pRHhMb_S6KC7RnTfAQQDxd5aYSWw3vxhR3d35pnBLY"/>
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] font-label-md text-secondary border border-secondary px-2 py-0.5">CORPORATE</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4 leading-tight">Corporate Travel Trends: The Shift to Bespoke Service</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6 line-clamp-3">How the world's leading firms are redefining executive travel, prioritizing efficiency, privacy, and cultural immersion.</p>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant/30">
+<span class="text-on-surface-variant font-label-md text-[12px]">MARCH 08, 2024</span>
+<a class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" href="#">north_east</a>
+</div>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="luxury-card group border border-outline-variant bg-surface transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img alt="Article Image" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Intricate geometric Islamic tilework on the facade of a historical palace in Samarkand. The patterns are vibrant blues, turquoises, and golds, reflecting the midday sun. The shot is detailed and focused on the mathematical beauty of the architecture. The mood is respectful and awe-inspiring, showcasing centuries-old craftsmanship in a modern high-contrast style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRarnCMdlV7jf2gSyBkE1VJ1sNIzttNl7qrWhvbHUaKSeJGTkwz8EN2uyl3CYF64E6ZuOf9gVb0Ne-GmYtPRlkFwAH0TjWDAjT4nxpK8Z6WJW8NSSFjQVhGTjR4JThISwY2hJH4N9GKxr5pgFDnswppjYOEc7kgycBY4Eapi1TSIe-lLqQ7_PsamMOvllgIycwC7iHeMtwMbopuJ7Td6rLJVUwvNoANp0f4d0aGONzR6cxRXLzCxs3hQYMrARjJWr6YreKerMnFdM"/>
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] font-label-md text-secondary border border-secondary px-2 py-0.5">ARCHITECTURE</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4 leading-tight">Moorish Influence: The Mathematics of Beauty</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6 line-clamp-3">An exploration of the geometrical wonders found in historical travel destinations across the Islamic world.</p>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant/30">
+<span class="text-on-surface-variant font-label-md text-[12px]">FEBRUARY 28, 2024</span>
+<a class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" href="#">north_east</a>
+</div>
+</div>
+</article>
+</section>
+<!-- Newsletter Subscription -->
+<section class="bg-primary p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<!-- Geometric pattern representation -->
+<div class="grid grid-cols-12 h-full w-full">
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+<div class="border-r border-on-primary/20"></div>
+</div>
+</div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-display-sm text-display-sm text-on-primary mb-6">Join the Inner Circle</h2>
+<p class="text-on-primary/70 font-body-lg text-body-lg mb-10">Receive exclusive travel itineraries, cultural essays, and private tour announcements directly to your inbox.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-1 bg-white/10 border-b-2 border-on-primary/30 text-on-primary placeholder:text-on-primary/40 px-4 py-3 focus:border-secondary transition-all outline-none" placeholder="Your Professional Email" type="email"/>
+<button class="bg-secondary text-on-secondary px-8 py-4 font-label-md text-label-md tracking-widest hover:brightness-110 transition-all">SUBSCRIBE</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-tertiary-container border-t-2 border-secondary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-sm text-display-sm font-bold text-on-primary dark:text-on-tertiary-container mb-8">
+                    AL-MUSAFIR
+                </div>
+<p class="text-on-primary/60 font-body-md text-body-md pr-4">
+                    Elevating travel into a legacy of cultural connection and spiritual discovery.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-secondary-fixed mb-8 tracking-widest">NAVIGATION</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md block" href="#">About Us</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md block" href="#">Destinations</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md block" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-secondary-fixed mb-8 tracking-widest">LEGAL</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md block" href="#">Terms of Service</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md block" href="#">FAQ</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md block" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-secondary-fixed mb-8 tracking-widest">CONNECT</h4>
+<div class="flex gap-6 mb-8">
+<span class="material-symbols-outlined text-on-primary/60 hover:text-secondary-fixed cursor-pointer transition-colors">public</span>
+<span class="material-symbols-outlined text-on-primary/60 hover:text-secondary-fixed cursor-pointer transition-colors">mail</span>
+<span class="material-symbols-outlined text-on-primary/60 hover:text-secondary-fixed cursor-pointer transition-colors">shield</span>
+</div>
+<div class="text-[12px] text-on-primary/40 font-label-md">
+                    © 2024 Al-Musafir Luxury Travel. All Rights Reserved.
+                </div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple search animation logic
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('scale-[1.02]');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('scale-[1.02]');
+        });
+
+        // Article hover interaction
+        const cards = document.querySelectorAll('.luxury-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const img = card.querySelector('img');
+                if (img) img.style.transform = 'scale(1.05)';
+            });
+            card.addEventListener('mouseleave', () => {
+                const img = card.querySelector('img');
+                if (img) img.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

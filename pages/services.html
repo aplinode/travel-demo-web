@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Transport Services | AL-MUSAFIR Luxury Travel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-border-hover:hover {
+            border-bottom: 2px solid #D4AF37;
+        }
+        .nav-underline-active {
+            border-bottom: 2px solid #D4AF37;
+        }
+        .perspective-card {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
+        }
+        .perspective-card:hover {
+            transform: translateY(-8px);
+            border-color: #D4AF37;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline-variant": "#c4c6cf",
+                        "primary-fixed-dim": "#afc8f0",
+                        "on-primary-fixed": "#001c3a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#1d1f1f",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d4e3ff",
+                        "on-primary-container": "#6f88ad",
+                        "on-surface-variant": "#43474e",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#574500",
+                        "secondary": "#735c00",
+                        "inverse-surface": "#313030",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#745c00",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary-fixed": "#ffe088",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container": "#f0eded",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed65b",
+                        "on-surface": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "inverse-primary": "#afc8f0",
+                        "on-error": "#ffffff",
+                        "outline": "#74777f",
+                        "surface-tint": "#476083",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-container": "#858687",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-container": "#001f3f",
+                        "tertiary": "#050606",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "primary": "#000613"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "display-sm": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-sm": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface/95 backdrop-blur-md border-b border-primary dark:border-outline-variant sticky top-0 z-50 shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto h-20">
+<div class="font-display-sm text-display-sm font-bold text-primary">AL-MUSAFIR</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Packages</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-secondary font-bold" href="#">Transport</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Hotels</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary px-8 py-3 font-label-md text-label-md hover:bg-opacity-90 transition-all border-b-0 relative group overflow-hidden">
+<span class="relative z-10">Book A Tour</span>
+<div class="absolute bottom-0 left-0 w-full h-0.5 bg-[#D4AF37] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+<img class="w-full h-full object-cover mix-blend-overlay" data-alt="A pristine white luxury SUV driving along a winding, high-altitude mountain road during the golden hour. The landscape features dramatic jagged peaks and a clear blue sky. The visual style is high-end editorial photography with a soft focus on the background, emphasizing the vehicle's sleek design and the quiet majesty of the natural environment, utilizing a palette of deep blues and crisp whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzI5ap6mIpki0XIq1gEXNvsnW1nlOx7ILlSZKVoBat_iBZUfypMJLcTES5F5fH9DRYyfPiCZVf5VcYqUBF81XkvYDrcZwrahiuK5J75Mx18ctVki1sAphYnUVlm1sXyjw2oHXCAPnd1I-_rd36fO-sNdpm93JCD1usHmTfmZA9CduRoctyxlPBcXWKotbSL_SZ8hqzmWn0wF65vKxJMJ9VwZCEb03ehPwhp0qi-18w9LDLOBhZTLNJ7Q4phJDGrMdAyMakcOQJlng"/>
+</div>
+<div class="relative z-10 w-full max-w-container-max px-margin-desktop text-white">
+<div class="max-w-2xl">
+<span class="font-label-md text-label-md tracking-widest text-[#D4AF37] mb-4 block">PREMIUM MOBILITY</span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">Mastery in Motion</h1>
+<p class="font-body-lg text-body-lg text-white/80 mb-10 border-l-2 border-[#D4AF37] pl-6">
+                        Experience the zenith of luxury logistics. From private jet tarmac transfers to cross-country expeditions, our fleet is engineered for the discerning traveler.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-[#D4AF37] text-primary-container px-10 py-4 font-label-md text-label-md font-bold uppercase hover:bg-[#C5A028] transition-colors">Explore Fleet</button>
+<button class="border border-[#D4AF37] text-white px-10 py-4 font-label-md text-label-md uppercase hover:bg-[#D4AF37]/10 transition-colors">Corporate Enquiry</button>
+</div>
+</div>
+</div>
+</section>
+<!-- The Fleet Showcase (Bento Grid) -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display-sm text-display-sm text-primary mb-4">Our Distinguished Fleet</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Card: SUV -->
+<div class="md:col-span-8 group relative overflow-hidden bg-white border border-[#E0E0E0] perspective-card">
+<div class="h-[500px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A side-profile shot of a black Toyota Land Cruiser parked on a minimalist, architectural concrete driveway under sharp daylight. The environment is modern and clean, with strong geometric shadows. The lighting is high-contrast, highlighting the vehicle's rugged yet refined metallic surfaces. The atmosphere is professional and authoritative, mirroring the luxury concierge brand's commitment to reliability and status." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdCL43GZ8VTsCxR3UsHRwEXWlIHX85RDb5fKk4ezisRmBLPVWX2UkflBXjDOEA5x2gkAKWcqb33IkF9C78c5MgaKMrGwrKp2-o2gCgI9iplchKUzmSLygE8MqHYpxQB5hVC91OLGx_dM8PoyciVZ5CJjfIfx05txs9fBw02VoXjcMSpFX0GMSsYJo0xQdAiiG7Bz_Y5AwGAcdNbw1Zuze1sxFddIKpkFlcW-9QDMYJ4F-Y5tWq9dyEmKxmyrkJn8r0Su-Jb3vNUc4"/>
+</div>
+<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent w-full text-white">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-3 py-1 bg-secondary text-primary-container text-[10px] font-bold tracking-tighter uppercase">Elite Status</span>
+</div>
+<h3 class="font-display-sm text-headline-lg mb-2">SUV: Toyota Land Cruiser &amp; Prado</h3>
+<p class="font-body-md text-white/70 max-w-md">The gold standard for desert expeditions and rugged terrains, offering uncompromising safety and absolute comfort.</p>
+</div>
+</div>
+<!-- Vertical Card: Executive Sedan -->
+<div class="md:col-span-4 group relative overflow-hidden bg-white border border-[#E0E0E0] perspective-card">
+<div class="h-[500px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up of a silver Mercedes-Benz S-Class headlight and grille, showcasing intricate engineering and luxury materials. The car is parked in a clean, brightly lit corporate hangar. The lighting creates elegant reflections on the metallic paint. The mood is sophisticated and sleek, emphasizing the precision of executive transport services for high-net-worth individuals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCXhnjmW0rgfVMRKlIYxNIFauzNhSOTZkv6Fogbl0vjhq5IOnhHpSoiaaG08-dx843YHFv7M_CEML1mUoQdp6xQpog-1nSAL_U4QsTHODkO5vGLzcFUuILuGMMW1hSWNGbEVzHezViuXXqwHN6T-311Q7fEk9U9mtZduFUGxX_N64vXRehjanF-VbxI7akfkHO7aWmhhCgI0r0aE_QkG044KYgaryMrmIiob9YoEdgmOsxOLRuKnNfUAQqs4jVr4OKHDTxam78UJA"/>
+</div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent text-white">
+<h3 class="font-display-sm text-headline-lg mb-2">Executive Sedans</h3>
+<p class="font-body-md text-white/70">Refined transport for urban movements and VIP airport transfers.</p>
+</div>
+</div>
+<!-- Horizontal Card: Luxury Buses -->
+<div class="md:col-span-6 group relative overflow-hidden bg-white border border-[#E0E0E0] perspective-card">
+<div class="h-[350px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A large, modern luxury coach with tinted windows and a pristine white exterior parked in a contemporary transportation hub. The surrounding architecture is minimalist with large glass panels and polished floors. The image uses a clean, light-mode aesthetic with soft, natural lighting. The scene conveys a sense of organized, high-end group travel and logistical excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBvgtiOH1DxR0JlpB33kf4Y1917Wf_siuAJWiLW6Tnl1vvVPEHfrKvMZn855H800UnZutd_DsVG6_PCcnn2FGFJMDn9B6mlZxpOy_3kaue3PqlER2motLfDQW5XaiutpOQBvH7PKLFwTLw8QxeJGo4ulEDnRstQZ7INmE0n0sXLMWqPNalNnxmKpu7gUXS7ai5FhkSDSR7XrxINOI_nkyjB6uJc1rV_w3kuWAVmxzXybf6EZEpIo3OJNpghS0YiWAbfBDukAg96Ig"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-lg text-primary mb-2">Luxury Group Coaches</h3>
+<p class="font-body-md text-on-surface-variant">50-seater premium liners with climate control and ergonomic seating for large delegations.</p>
+</div>
+</div>
+<!-- Horizontal Card: Coasters -->
+<div class="md:col-span-6 group relative overflow-hidden bg-white border border-[#E0E0E0] perspective-card">
+<div class="h-[350px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sleek white Toyota Coaster driving through a lush valley with green hills in the background. The lighting is warm and golden, suggesting a late afternoon journey. The vehicle is captured in motion, symbolizing progress and reliability. The aesthetic is bright and editorial, focused on the comfort of group journeys through beautiful landscapes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD59-XwGSVplF-G9prQRR6TYLoU8PjtLFG3iSwz_QUNjCew-aRHW32CoVzvVuHv3j5MUlaZGmmpCCi8dlIY81BS3_h8NCmMCvW1SGxtTV3_oItFTcVZQiijtvS0QSfYSQlfkqqPslJ04fkXNU98GH1JERNFDSQ9oX7znl-ajJWCoDBZu0fHOu607wRetfB3iU_wP_zijrlitfiGESWKFB411WhhIE7zpyPQVLnPmWv4ZF21OdIcxr694Y4xy4xTpYVlvR2a9LOtehw"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-lg text-primary mb-2">Elite Coasters</h3>
+<p class="font-body-md text-on-surface-variant">Ideal for mid-sized groups seeking a balance between agility and interior space.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Features -->
+<section class="bg-primary py-24 text-white">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 border border-secondary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[#D4AF37] scale-150" data-icon="airline_seat_recline_extra">airline_seat_recline_extra</span>
+</div>
+<h4 class="font-label-md text-label-md mb-2">Climate Control</h4>
+<p class="text-white/60 text-sm">Adaptive multi-zone cooling systems tailored for harsh desert environments.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 border border-secondary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[#D4AF37] scale-150" data-icon="security">security</span>
+</div>
+<h4 class="font-label-md text-label-md mb-2">Elite Safety</h4>
+<p class="text-white/60 text-sm">GPS tracking, reinforced frames, and comprehensive insurance coverage.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 border border-secondary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[#D4AF37] scale-150" data-icon="person_pin_circle">person_pin_circle</span>
+</div>
+<h4 class="font-label-md text-label-md mb-2">Expert Chauffeurs</h4>
+<p class="text-white/60 text-sm">Multilingual, certified drivers with extensive knowledge of local geography.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 border border-secondary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[#D4AF37] scale-150" data-icon="wifi">wifi</span>
+</div>
+<h4 class="font-label-md text-label-md mb-2">On-board Wi-Fi</h4>
+<p class="text-white/60 text-sm">Stay connected with high-speed satellite internet throughout your journey.</p>
+</div>
+</div>
+</section>
+<!-- Corporate Solutions Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/2">
+<h2 class="font-display-sm text-display-sm text-primary mb-6">Corporate Logistics Management</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">
+                        We provide turnkey transport solutions for diplomatic missions, corporate conferences, and high-stakes business retreats. Our fleet operations are managed by a dedicated concierge team available 24/7.
+                    </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-4 font-body-md text-primary">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+                            Dedicated Account Manager for Logistics
+                        </li>
+<li class="flex items-center gap-4 font-body-md text-primary">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+                            VIP Fast-Track &amp; Tarmac Access
+                        </li>
+<li class="flex items-center gap-4 font-body-md text-primary">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+                            Flexible Long-term Contract Options
+                        </li>
+</ul>
+<button class="bg-primary text-white px-12 py-5 font-label-md text-label-md group flex items-center gap-3">
+                        Request Corporate Portfolio
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="md:w-1/2 relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-secondary/10 z-0"></div>
+<div class="relative z-10 border-l-8 border-secondary">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-1000 shadow-xl" data-alt="A low-angle shot of a sleek glass and steel skyscraper reflecting the clear blue sky. In the foreground, a line of black luxury sedans is neatly parked. The image is clean and corporate, utilizing a color palette of deep navy and bright white. The mood is professional and high-stakes, representing the brand's expertise in corporate logistics for high-profile business clients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLQXpD3E-FWw-8ki2rgZhrYJnJxhbeNkDj5Pme5tVzbXfnpWhRo6atWD5cHcn1K9IDBNvcI4pCvAt-Lbxt_ArF2D9JKziCBM_C5bCizrfuMGOirnRA1dDXUp1r_xglH4TTBxO3Mpq7zvJT1HH8I6fUof4t1p2VakVRqiN2lgxf-zi--FOSRQ4KRZuXm7kleD0m-YfiLArIWr4DmdFfwwMEcxCHGf3ctLWxPgWcGmaS4FUM5weVhv46TB6D0ajBu2Wyo_WNoh32mUI"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Itinerary Chips for Popular Routes -->
+<section class="py-16 bg-surface-container-low overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-8 text-center uppercase tracking-widest">Most Requested Routes</h3>
+<div class="flex flex-wrap justify-center gap-4">
+<div class="border border-primary-container px-6 py-3 flex items-center gap-2 group cursor-pointer hover:bg-primary-container hover:text-white transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="flight_takeoff">flight_takeoff</span>
+<span class="font-label-md">City Terminal to Airport</span>
+</div>
+<div class="border border-primary-container px-6 py-3 flex items-center gap-2 group cursor-pointer hover:bg-primary-container hover:text-white transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="location_city">location_city</span>
+<span class="font-label-md">Inter-City Express</span>
+</div>
+<div class="border border-primary-container px-6 py-3 flex items-center gap-2 group cursor-pointer hover:bg-primary-container hover:text-white transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="terrain">terrain</span>
+<span class="font-label-md">Mountain Expedition</span>
+</div>
+<div class="border border-primary-container px-6 py-3 flex items-center gap-2 group cursor-pointer hover:bg-primary-container hover:text-white transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="diamond">diamond</span>
+<span class="font-label-md">Private VIP Convoy</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto border-t-2 border-secondary">
+<div class="col-span-1">
+<div class="font-display-sm text-display-sm font-bold mb-6">AL-MUSAFIR</div>
+<p class="font-body-md text-on-primary/60">Redefining luxury travel in the Middle East and beyond with a commitment to heritage and excellence.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-secondary-fixed mb-6 uppercase">Quick Links</h4>
+<div class="flex flex-col gap-4">
+<a class="font-label-md text-on-primary/80 hover:text-secondary-fixed hover:translate-x-1 transition-all" href="#">About Us</a>
+<a class="font-label-md text-on-primary/80 hover:text-secondary-fixed hover:translate-x-1 transition-all" href="#">Destinations</a>
+<a class="font-label-md text-on-primary/80 hover:text-secondary-fixed hover:translate-x-1 transition-all" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-secondary-fixed mb-6 uppercase">Legal</h4>
+<div class="flex flex-col gap-4">
+<a class="font-label-md text-on-primary/80 hover:text-secondary-fixed hover:translate-x-1 transition-all" href="#">Terms of Service</a>
+<a class="font-label-md text-on-primary/80 hover:text-secondary-fixed hover:translate-x-1 transition-all" href="#">FAQ</a>
+<a class="font-label-md text-on-primary/80 hover:text-secondary-fixed hover:translate-x-1 transition-all" href="#">Contact</a>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-secondary-fixed mb-6 uppercase">Newsletter</h4>
+<div class="flex flex-col gap-4">
+<p class="text-sm text-white/60 mb-2">Subscribe for exclusive updates.</p>
+<div class="relative">
+<input class="bg-transparent border-b border-white/30 focus:border-secondary w-full py-2 outline-none text-white font-body-md" placeholder="Email Address" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-secondary" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-black/20 py-6 text-center text-xs tracking-widest text-white/40 uppercase">
+            © 2024 Al-Musafir Luxury Travel. All Rights Reserved.
+        </div>
+</footer>
+<script>
+        // Micro-interactions and subtle effects
+        document.querySelectorAll('.perspective-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 25;
+                const rotateY = (centerX - x) / 25;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
+            });
+        });
+    </script>
+</body></html>

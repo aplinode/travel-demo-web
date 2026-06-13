@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour Packages | AL-MUSAFIR Luxury Travel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline-variant": "#c4c6cf",
+                        "primary-fixed-dim": "#afc8f0",
+                        "on-primary-fixed": "#001c3a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#1d1f1f",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d4e3ff",
+                        "on-primary-container": "#6f88ad",
+                        "on-surface-variant": "#43474e",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#574500",
+                        "secondary": "#735c00",
+                        "inverse-surface": "#313030",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#745c00",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary-fixed": "#ffe088",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container": "#f0eded",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed65b",
+                        "on-surface": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "inverse-primary": "#afc8f0",
+                        "on-error": "#ffffff",
+                        "outline": "#74777f",
+                        "surface-tint": "#476083",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-container": "#858687",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-container": "#001f3f",
+                        "tertiary": "#050606",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "primary": "#000613"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "display-sm": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-sm": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .gold-border-hover:hover {
+            border-bottom: 2px solid #D4AF37;
+        }
+        .custom-shadow {
+            box-shadow: 0px 10px 40px rgba(0, 31, 63, 0.05);
+        }
+        .btn-primary-hover:hover::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #D4AF37;
+            transform: scaleX(1);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/95 backdrop-blur-md border-b border-primary dark:border-outline-variant shadow-sm dark:shadow-none fixed top-0 w-full z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto h-20">
+<div class="font-display-sm text-display-sm font-bold text-primary dark:text-inverse-primary tracking-tight">
+                AL-MUSAFIR
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-primary font-bold font-label-md text-label-md border-b-2 border-secondary" href="#">Packages</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Transport</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Hotels</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="relative bg-primary text-on-primary px-8 py-3 font-label-md text-label-md uppercase tracking-widest overflow-hidden group">
+<span class="relative z-10">Book A Tour</span>
+<div class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+</button>
+</nav>
+</header>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md uppercase tracking-[0.2em]">
+<span class="w-12 h-px bg-secondary"></span>
+                        Curation Excellence
+                    </div>
+<h1 class="font-display-lg text-display-lg text-primary">Bespoke Travel <br/>Tiers</h1>
+<p class="text-body-lg text-on-surface-variant max-w-lg">
+                        Select a voyage tailored to your personal requirements. From refined business travel to ultimate private seclusion, our tiers reflect the pinnacle of logistical precision.
+                    </p>
+</div>
+<div class="relative aspect-video bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A high-angle, professional photograph of a pristine, white private jet parked on a clean tarmac under a clear, bright blue sky. The lighting is crisp and high-key, emphasizing the sleek engineering and aerodynamic curves of the aircraft. In the background, minimalist airport architecture is visible, maintaining a modern and corporate aesthetic. The overall mood is one of exclusivity, luxury, and meticulous attention to detail, aligned with a premium concierge service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUScMFFbjrvTfScLrMhT9y4wWauXMPfFxV9b5v1jdn9GnVQpSkq7UZNL2tcF4xQ9Z4u4Sf_fBUSqa85jnnF0J7HmbTbATTySn8N2GgJYA-YWRJVsbihc1CBuD1IydvF1Y2xPXfNfR3w29kFkKdXnrNJcwYPRQ4j3aSB28d12bk9y0HpRsXtL8fLTdJhI0NHj2JVo51Dz2qqWJD2qMogIZJck1uoPwi5DA2xaG5T38ZJWeKRxlWxRXZ5hpIhw6Q4HSRLV-WJATb8hY"/>
+</div>
+</div>
+</section>
+<!-- Package Bento Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-32">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Economy (Refined) -->
+<div class="border border-outline-variant p-8 flex flex-col group hover:border-secondary transition-all duration-300 bg-surface">
+<div class="mb-12">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest block mb-2">Tier I</span>
+<h3 class="font-headline-lg text-headline-lg text-primary">Economy</h3>
+</div>
+<div class="space-y-4 mb-12 flex-grow">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">flight</span>
+<span class="text-body-md">Commercial Aviation</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">hotel</span>
+<span class="text-body-md">4-Star Corporate</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">group</span>
+<span class="text-body-md">Scheduled Tours</span>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant">
+<div class="font-display-sm text-display-sm mb-6 text-primary">$4,500<span class="text-sm font-body-md text-on-surface-variant">/pp</span></div>
+<button class="w-full py-4 border border-secondary text-primary font-label-md text-label-md uppercase tracking-widest hover:bg-secondary/5 transition-colors">Select Tier</button>
+</div>
+</div>
+<!-- Standard (Executive) -->
+<div class="border border-outline-variant p-8 flex flex-col group hover:border-secondary transition-all duration-300 bg-surface">
+<div class="mb-12">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest block mb-2">Tier II</span>
+<h3 class="font-headline-lg text-headline-lg text-primary">Standard</h3>
+</div>
+<div class="space-y-4 mb-12 flex-grow">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">flight_takeoff</span>
+<span class="text-body-md">Business Class</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">apartment</span>
+<span class="text-body-md">5-Star Boutique</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">person</span>
+<span class="text-body-md">Private Local Guide</span>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant">
+<div class="font-display-sm text-display-sm mb-6 text-primary">$8,200<span class="text-sm font-body-md text-on-surface-variant">/pp</span></div>
+<button class="w-full py-4 border border-secondary text-primary font-label-md text-label-md uppercase tracking-widest hover:bg-secondary/5 transition-colors">Select Tier</button>
+</div>
+</div>
+<!-- Premium (Signature) -->
+<div class="relative bg-primary-container p-8 flex flex-col group transition-all duration-300 overflow-hidden border-t-4 border-secondary shadow-xl">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-secondary text-on-secondary px-3 py-1 font-label-md text-[10px] uppercase tracking-widest">Most Popular</span>
+</div>
+<div class="mb-12 relative z-10">
+<span class="font-label-md text-label-md text-on-primary-container uppercase tracking-widest block mb-2">Tier III</span>
+<h3 class="font-headline-lg text-headline-lg text-on-primary">Premium</h3>
+</div>
+<div class="space-y-4 mb-12 flex-grow relative z-10 text-on-primary/90">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">connecting_airports</span>
+<span class="text-body-md">Shared Private Jet</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">castle</span>
+<span class="text-body-md">Luxury Heritage Estates</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">concierge</span>
+<span class="text-body-md">24/7 Personal Concierge</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">restaurant</span>
+<span class="text-body-md">Full Board Gourmet</span>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 relative z-10">
+<div class="font-display-sm text-display-sm mb-6 text-on-primary">$15,900<span class="text-sm font-body-md text-on-primary/60">/pp</span></div>
+<button class="w-full py-4 bg-secondary text-on-secondary font-label-md text-label-md uppercase tracking-widest hover:brightness-110 transition-all">Secure Voyage</button>
+</div>
+</div>
+<!-- VIP (Royal) -->
+<div class="border border-outline-variant p-8 flex flex-col group hover:border-secondary transition-all duration-300 bg-white">
+<div class="mb-12">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest block mb-2">Tier IV</span>
+<h3 class="font-headline-lg text-headline-lg text-primary">VIP Elite</h3>
+</div>
+<div class="space-y-4 mb-12 flex-grow">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">diamond</span>
+<span class="text-body-md">Private Jet (Point-to-Point)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">location_city</span>
+<span class="text-body-md">Ultra-Luxury Penthouse</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">security</span>
+<span class="text-body-md">Discrete Personal Security</span>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant">
+<div class="font-display-sm text-display-sm mb-6 text-primary">POA</div>
+<button class="w-full py-4 border border-primary bg-primary text-on-primary font-label-md text-label-md uppercase tracking-widest hover:bg-primary/90 transition-colors">Consult Specialist</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Comparison Table -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-display-sm text-display-sm text-primary mb-4">Detailed Specifications</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Compare the specific amenities and service levels across our four core luxury tiers.</p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="border-b-2 border-primary">
+<th class="py-6 px-4 text-left font-label-md text-label-md uppercase text-on-surface-variant">Feature</th>
+<th class="py-6 px-4 text-center font-label-md text-label-md uppercase text-primary">Economy</th>
+<th class="py-6 px-4 text-center font-label-md text-label-md uppercase text-primary">Standard</th>
+<th class="py-6 px-4 text-center font-label-md text-label-md uppercase text-secondary">Premium</th>
+<th class="py-6 px-4 text-center font-label-md text-label-md uppercase text-primary">VIP Elite</th>
+</tr>
+</thead>
+<tbody class="text-body-md">
+<tr class="border-b border-outline-variant">
+<td class="py-6 px-4 font-bold text-primary">Transport</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Economy Class Air</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Business Class Air</td>
+<td class="py-6 px-4 text-center font-semibold">Private Jet Shared</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Private Jet Charter</td>
+</tr>
+<tr class="border-b border-outline-variant bg-surface-container-low">
+<td class="py-6 px-4 font-bold text-primary">Accommodation</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">4-Star Hotel</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">5-Star Boutique</td>
+<td class="py-6 px-4 text-center font-semibold">Luxury Estate</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Royal Suite / Villa</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-6 px-4 font-bold text-primary">Chauffeur</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Airport Shuttle</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Private Sedan</td>
+<td class="py-6 px-4 text-center font-semibold">Luxury SUV / Limo</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Armored Fleet</td>
+</tr>
+<tr class="border-b border-outline-variant bg-surface-container-low">
+<td class="py-6 px-4 font-bold text-primary">Meals</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Breakfast Incl.</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Half Board</td>
+<td class="py-6 px-4 text-center font-semibold">Full Board + Chef</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Personalized Menu</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="py-6 px-4 font-bold text-primary">Excursions</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Group Access</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">Private Access</td>
+<td class="py-6 px-4 text-center font-semibold">After-Hours Access</td>
+<td class="py-6 px-4 text-center text-on-surface-variant">VIP Seclusion</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Itinerary Chips / Quick Labels -->
+<section class="max-w-container-max mx-auto px-margin-desktop mt-32">
+<div class="flex flex-wrap justify-center gap-4">
+<div class="border border-primary-container px-6 py-2 flex items-center gap-2 group hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-md text-label-md uppercase tracking-widest">14 Day Duration</span>
+</div>
+<div class="border border-primary-container px-6 py-2 flex items-center gap-2 group hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">airplanemode_active</span>
+<span class="font-label-md text-label-md uppercase tracking-widest">Global Logistics</span>
+</div>
+<div class="border border-primary-container px-6 py-2 flex items-center gap-2 group hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+<span class="font-label-md text-label-md uppercase tracking-widest">24/7 Support</span>
+</div>
+<div class="border border-primary-container px-6 py-2 flex items-center gap-2 group hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="font-label-md text-label-md uppercase tracking-widest">Premium Insurance</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary border-t-2 border-secondary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-sm text-display-sm font-bold text-on-primary mb-6 uppercase tracking-tighter">
+                    AL-MUSAFIR
+                </div>
+<p class="text-on-primary/60 font-body-md text-body-md leading-relaxed">
+                    Crafting extraordinary journeys for the world's most discerning travelers since 1992. Precision in logistics, luxury in experience.
+                </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed mb-8">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">About Us</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Destinations</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed mb-8">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">FAQ</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed mb-8">Newsletter</h4>
+<div class="flex flex-col gap-4">
+<p class="text-on-primary/60 text-sm">Subscribe for exclusive private jet offers.</p>
+<div class="flex border-b border-on-primary/30 py-2">
+<input class="bg-transparent border-none focus:ring-0 text-white placeholder:text-on-primary/40 w-full font-label-md text-sm" placeholder="Email Address" type="email"/>
+<button class="material-symbols-outlined text-secondary hover:text-white transition-colors">arrow_forward</button>
+</div>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-white/5 max-w-container-max mx-auto flex justify-between items-center text-on-primary/40 text-xs uppercase tracking-widest">
+<span>© 2024 Al-Musafir Luxury Travel. All Rights Reserved.</span>
+<div class="flex gap-6">
+<a class="hover:text-on-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-on-primary transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Scroll Animation for Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Hover Micro-interactions
+        const cards = document.querySelectorAll('.group');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('translate-y-[-4px]');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('translate-y-[-4px]');
+            });
+        });
+    </script>
+</body></html>

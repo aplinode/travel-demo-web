@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AL-MUSAFIR | Destinations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f3f0ef",
+                    "outline-variant": "#c4c6cf",
+                    "primary-fixed-dim": "#afc8f0",
+                    "on-primary-fixed": "#001c3a",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#1d1f1f",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#d4e3ff",
+                    "on-primary-container": "#6f88ad",
+                    "on-surface-variant": "#43474e",
+                    "background": "#fcf9f8",
+                    "on-secondary-fixed-variant": "#574500",
+                    "secondary": "#735c00",
+                    "inverse-surface": "#313030",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#745c00",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-fixed-dim": "#e9c349",
+                    "secondary-fixed": "#ffe088",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-container": "#f0eded",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#fed65b",
+                    "on-surface": "#1c1b1b",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#2f486a",
+                    "surface": "#fcf9f8",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-background": "#1c1b1b",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "inverse-primary": "#afc8f0",
+                    "on-error": "#ffffff",
+                    "outline": "#74777f",
+                    "surface-tint": "#476083",
+                    "surface-dim": "#dcd9d9",
+                    "on-tertiary-container": "#858687",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary-container": "#001f3f",
+                    "tertiary": "#050606",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-high": "#eae7e7",
+                    "primary": "#000613"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "display-lg": ["Playfair Display"],
+                    "label-md": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "display-sm": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-sm": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-hover:hover {
+            border-bottom: 2px solid #D4AF37;
+            transition: border-bottom 0.3s ease;
+        }
+        .card-lift {
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease;
+        }
+        .card-lift:hover {
+            transform: translateY(-4px);
+            border-color: #D4AF37;
+        }
+        .sticky-nav {
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto z-50 bg-surface/95 backdrop-blur-md docked full-width top-0 sticky border-b border-primary shadow-sm">
+<div class="font-display-sm text-display-sm font-bold text-primary">AL-MUSAFIR</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Destinations</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Packages</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Transport</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Hotels</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary px-6 py-3 font-label-md text-label-md tracking-widest hover:border-b-2 hover:border-[#D4AF37] transition-all duration-300">
+            BOOK A TOUR
+        </button>
+</header>
+<main class="max-w-container-max mx-auto px-4 md:px-margin-desktop py-12 md:py-20">
+<!-- Hero Section -->
+<section class="mb-24 text-center">
+<h1 class="font-display-lg text-display-lg mb-6 text-primary">Curated Expeditions</h1>
+<p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
+                From the jagged peaks of the Karakoram to the intricate tile-work of the Walled City, explore destinations selected for their cultural significance and natural majesty.
+            </p>
+<div class="mt-8 flex justify-center gap-4">
+<span class="border border-outline-variant px-4 py-1 text-label-md font-label-md text-primary tracking-tighter">ALL DESTINATIONS</span>
+<span class="border border-outline-variant px-4 py-1 text-label-md font-label-md text-on-surface-variant opacity-60 tracking-tighter">NORTHERN PEAKS</span>
+<span class="border border-outline-variant px-4 py-1 text-label-md font-label-md text-on-surface-variant opacity-60 tracking-tighter">HERITAGE SITES</span>
+</div>
+</section>
+<!-- Destination Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Item 1: Skardu (Large Highlight) -->
+<div class="md:col-span-8 group relative bg-surface border border-outline-variant card-lift overflow-hidden">
+<div class="aspect-[16/9] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A breathtaking panoramic view of the Skardu Valley in Pakistan, featuring the turquoise Indus River winding through a rugged landscape of towering, snow-capped mountains. The lighting is crisp and clear, characteristic of high-altitude mornings, with a soft cool color palette. The aesthetic is one of serene, untamed luxury, focusing on the sheer scale of the Karakoram range without any subjects." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjklAKpSzOGZP-T7LrP7EMPl0_xPlX4z68-qDMfM6epesnwdbB7xyWlNfNrShDZibaXVS-htiKbuFfGvEX48fqL-nvRqEGMEI90wa_9aI4Hi5hopy3xfRQLEJaydafTkusSXAKDvTNLX8FA3l0VH5Qbaon-2JOCUEe0ogWXzrzYsrkzDtTfsYjaE7kdswGzVIxZLvZpGqpqHGqIwcys6OscE74cQ_lLuQGAgxXf4bYwHbPeQ5T1AjZry2aM_McBa8ZJZ95JqephNY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<div class="flex gap-2 mb-4">
+<span class="border border-secondary-fixed text-secondary-fixed px-3 py-1 text-[10px] font-label-md tracking-widest">PRIVATE JET ACCESS</span>
+<span class="border border-secondary-fixed text-secondary-fixed px-3 py-1 text-[10px] font-label-md tracking-widest">LUXURY LODGING</span>
+</div>
+<h2 class="font-display-sm text-display-sm mb-2">Skardu Valley</h2>
+<p class="font-body-md text-body-md max-w-md opacity-90">The gateway to the world's highest peaks. An landscape of high-altitude deserts and turquoise glacial lakes.</p>
+</div>
+</div>
+<div class="p-8 flex justify-between items-center bg-white">
+<div>
+<p class="font-label-md text-label-md text-secondary-fixed-variant uppercase tracking-widest mb-1">Best Season</p>
+<p class="font-body-md text-body-md font-bold text-primary">May — September</p>
+</div>
+<button class="border border-primary-container px-8 py-3 font-label-md text-label-md text-primary-container hover:bg-primary-container hover:text-white transition-colors duration-300">
+                        INQUIRE
+                    </button>
+</div>
+</div>
+<!-- Item 2: Lahore Fort (Historical) -->
+<div class="md:col-span-4 group relative bg-surface border border-outline-variant card-lift overflow-hidden">
+<div class="aspect-[4/5] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="The intricate marble and tile work of the Sheesh Mahal within the Lahore Fort, showcasing Mughal architectural precision. The image is captured with soft evening sunlight casting long shadows and highlighting the gold and mirrored details. The color palette is rich with earthy tones and gold accents, conveying a sense of royal heritage and historical luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmoFPSRdMF-E5CHEBxuyc0FZ6-a82x0GTGZM8bPwNsVaRTkZe04yKm0QPOR0VzREwT3U3MtaJgrfMCzc69VLt1qfV_pRcektxwOnPdPhJhSnaDYQUbB74pMhi4kZsopNzGKCI3dBYBCwIVhPXNTPzgwOUdrpuKpEG41Lg6aHBhymiRr_8xzdiGPCx3sCzZypPvJGana8eGxisK6NvkH6B5ql_tuwwn5477VTI1pURLjYtmUBQwhGSmpxGHwf2CYAbaWlrd5VFoo1M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<h2 class="font-headline-lg text-headline-lg mb-2">Lahore Fort</h2>
+<p class="font-body-md text-body-md opacity-90">Experience the opulence of the Mughal Empire in the heart of Punjab.</p>
+</div>
+</div>
+<div class="p-8 bg-white h-full">
+<p class="font-label-md text-label-md text-secondary-fixed-variant uppercase tracking-widest mb-1">Cultural Tier</p>
+<p class="font-body-md text-body-md font-bold text-primary mb-6">UNESCO World Heritage</p>
+<button class="w-full border border-primary-container px-8 py-3 font-label-md text-label-md text-primary-container hover:bg-primary-container hover:text-white transition-colors duration-300">
+                        INQUIRE
+                    </button>
+</div>
+</div>
+<!-- Item 3: Hunza (Nature) -->
+<div class="md:col-span-4 group relative bg-surface border border-outline-variant card-lift overflow-hidden">
+<div class="aspect-[4/5] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A majestic view of Hunza Valley with the Altit Fort perched on a cliff edge against the backdrop of snow-capped Ultar Sar peak. The lighting is the golden hour of sunset, bathing the stone architecture in warm light. The aesthetic is editorial and grand, emphasizing the ancient permanence of the architecture within the dramatic mountain landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg4ta678SUSEp0vCGonqCNyId5FvWDp8vDJ4FZ1ENq0Fclk5kB4yj-IN2txBH_byMBVLxtgbOTzmTzCKvVJl3zONneNlb9TPUbWw_yg993ToFQKxgbXtAPAZ-KILSduzqAjxcNppPPWPQ2jqexUeKkmvlCQMbADi6dErcnIZSOtXgiG2vy9tMcOAMB9hl_kmhp37YiPikXPgQ3Yb2HDH7sgTQg8DG1W8wQ9vY7sg5WN6UXQg0EwsDMwwMfBdQL_Y7Th0TRWq2UtjU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<h2 class="font-headline-lg text-headline-lg mb-2">Hunza Valley</h2>
+<p class="font-body-md text-body-md opacity-90">Ancient traditions amidst the Rakaposhi range.</p>
+</div>
+</div>
+<div class="p-8 bg-white h-full">
+<p class="font-label-md text-label-md text-secondary-fixed-variant uppercase tracking-widest mb-1">Highlights</p>
+<p class="font-body-md text-body-md font-bold text-primary mb-6">Altit &amp; Baltit Forts</p>
+<button class="w-full border border-primary-container px-8 py-3 font-label-md text-label-md text-primary-container hover:bg-primary-container hover:text-white transition-colors duration-300">
+                        INQUIRE
+                    </button>
+</div>
+</div>
+<!-- Item 4: Faisal Mosque (Religious) -->
+<div class="md:col-span-8 group relative bg-surface border border-outline-variant card-lift overflow-hidden">
+<div class="aspect-[16/9] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="The modern architectural marvel of the Faisal Mosque in Islamabad, Pakistan, under a serene twilight sky. The sharp white triangular lines of the mosque contrast against the deep blue sky and the surrounding green Margalla Hills. The lighting is soft and ambient, emphasizing the geometric purity and spiritual tranquility of the location in a minimalist, modern style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtzADallickP1VmJuUKao1RlTn1RqrQ5_Kxd5QNDaj9eYLPSAw8uNrcSs2Ry9so43wcajmqFHVKz8BJ8xVnpeIxIInBTkqvIw_yOa-vRmrqbwGiXAWH0UgJF0cbSVFWzSUIiA4exQHHDgYhPgeWgpStttpWWNf1FydKlKtN1kxougYYWsX_NcpmnnNaIijCl82h1TjPnQNRdERQGFdYXscbHfPta3EZrVVS9tSWtAabf1Q35j5-EZmReSK7rYyUG8rrEA1HM-ywXs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<div class="flex gap-2 mb-4">
+<span class="border border-secondary-fixed text-secondary-fixed px-3 py-1 text-[10px] font-label-md tracking-widest">ARCHITECTURE</span>
+</div>
+<h2 class="font-display-sm text-display-sm mb-2">Faisal Mosque</h2>
+<p class="font-body-md text-body-md max-w-md opacity-90">A masterpiece of modern Islamic architecture nestled at the foot of the Margalla Hills.</p>
+</div>
+</div>
+<div class="p-8 flex justify-between items-center bg-white">
+<div>
+<p class="font-label-md text-label-md text-secondary-fixed-variant uppercase tracking-widest mb-1">Location</p>
+<p class="font-body-md text-body-md font-bold text-primary">Islamabad, Pakistan</p>
+</div>
+<button class="border border-primary-container px-8 py-3 font-label-md text-label-md text-primary-container hover:bg-primary-container hover:text-white transition-colors duration-300">
+                        INQUIRE
+                    </button>
+</div>
+</div>
+<!-- Item 5: Malam Jabba (Hill Station) -->
+<div class="md:col-span-6 group relative bg-surface border border-outline-variant card-lift overflow-hidden">
+<div class="aspect-[16/9] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious snow-covered resort in Malam Jabba, Swat, Pakistan, during winter. The scene features modern wooden alpine chalets surrounded by pine forests heavily laden with snow. The lighting is bright winter sunlight, creating high contrast and a sparkling effect on the snow. The aesthetic is one of cozy, exclusive winter retreat luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXCe3xVdbWmUnn408bLYPwbNDeJ1Xipt4ANeEMDKN6bgs8ZKksHiudo2_J1CUS25avbvbbFnC5kVZjJAu_H1sy52i8v92_ybozjUXhgD44L7fjyWdr3Q_4RI2bJtRJLdmBklNzkXhuxx7g2QS0XyTQryQXxIJnKdbFKu7YA0vfjqceUPT3ZUPY0liJPQkP9TuswI9rNd9FTNbZfR-6HkxIIyrTqH1p1kBCBEJSvLQmWbhVpCZdDC-xtU8gvrwLWg90pt8JKDhkAfc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<h2 class="font-display-sm text-display-sm mb-2">Malam Jabba</h2>
+<p class="font-body-md text-body-md opacity-90">Pakistan's premier winter sports and alpine resort destination.</p>
+</div>
+</div>
+<div class="p-8 bg-white h-full flex flex-col justify-between">
+<div>
+<p class="font-label-md text-label-md text-secondary-fixed-variant uppercase tracking-widest mb-1">Best Season</p>
+<p class="font-body-md text-body-md font-bold text-primary mb-6">December — March</p>
+</div>
+<button class="w-full border border-primary-container px-8 py-3 font-label-md text-label-md text-primary-container hover:bg-primary-container hover:text-white transition-colors duration-300">
+                        INQUIRE
+                    </button>
+</div>
+</div>
+<!-- Item 6: Murree (Hill Station) -->
+<div class="md:col-span-6 group relative bg-surface border border-outline-variant card-lift overflow-hidden">
+<div class="aspect-[16/9] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A mist-covered forest in the Murree hills, with colonial-era stone architecture visible through the tall pine trees. The mood is atmospheric and quiet, with cool tones and soft, diffused light. The visual style is editorial and evocative of a refined, private mountain sanctuary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApfUHPJp8vW_YQ5IxoR_hQsCluPZQHgoQhOI3mMsq2BUdWTYFoiRbYf5YYj8bAn3uIyrtB3b2-0EmFrLR-yZZEwo_CqWG5jnnYdqodeHozlRow91lewS70DY6UBbGm5SfemiULNDFIGo-g5Nro9ZWQwiEAkWofNalmzhG4HcIMLbMIWCK36kIbTJr6ToxsVjSkNeSr0nItU__gj3fY7eU3ndcevsuZp6BYf_OtwNT4sk7Gi0Gp22ri8NmN2hftudmmNPz_cwbGcEs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<h2 class="font-display-sm text-display-sm mb-2">Murree Hills</h2>
+<p class="font-body-md text-body-md opacity-90">The historic colonial summer capital, offering temperate pine-forested vistas.</p>
+</div>
+</div>
+<div class="p-8 bg-white h-full flex flex-col justify-between">
+<div>
+<p class="font-label-md text-label-md text-secondary-fixed-variant uppercase tracking-widest mb-1">Experience</p>
+<p class="font-body-md text-body-md font-bold text-primary mb-6">Private Mountain Retreats</p>
+</div>
+<button class="w-full border border-primary-container px-8 py-3 font-label-md text-label-md text-primary-container hover:bg-primary-container hover:text-white transition-colors duration-300">
+                        INQUIRE
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary border-t-2 border-secondary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-sm text-display-sm font-bold text-on-primary mb-6">AL-MUSAFIR</div>
+<p class="font-body-md text-body-md text-on-primary/70 mb-8">Redefining luxury travel in the heart of Pakistan. Heritage, nature, and precision.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md tracking-widest text-secondary-fixed">EXPLORE</h4>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">Destinations</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">Packages</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">Transport</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md tracking-widest text-secondary-fixed">LEGAL</h4>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-200" href="#">FAQ</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md tracking-widest text-secondary-fixed">CONTACT</h4>
+<p class="font-body-md text-body-md text-on-primary/80">Islamabad HQ, Pakistan</p>
+<p class="font-body-md text-body-md text-on-primary/80">concierge@al-musafir.com</p>
+<div class="flex gap-4 mt-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">share</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-on-primary/10 text-center md:text-left">
+<p class="font-label-md text-label-md text-on-primary/60">© 2024 Al-Musafir Luxury Travel. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- Micro-interactions Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.addEventListener('mousedown', () => {
+                    btn.classList.add('opacity-80');
+                });
+                btn.addEventListener('mouseup', () => {
+                    btn.classList.remove('opacity-80');
+                });
+            });
+
+            // Sticky Header Scroll Effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-md');
+                } else {
+                    header.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+</body></html>
