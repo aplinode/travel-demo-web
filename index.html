@@ -139,26 +139,34 @@
 <body class="bg-background text-on-background font-body-md selection:bg-secondary-container">
     <!-- TopNavBar -->
     <header
-        class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto z-50 bg-surface/95 backdrop-blur-md sticky top-0 docked full-width border-b border-primary dark:border-outline-variant shadow-sm dark:shadow-none">
-        <div class="font-display-sm text-display-sm font-bold text-primary dark:text-inverse-primary tracking-tight">
-            AL-MUSAFIR</div>
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto z-50 bg-surface/95 backdrop-blur-md sticky top-0 docked full-width border-b border-primary dark:border-outline-variant shadow-sm dark:shadow-none">
+        <a href="index.html" class="font-display-sm text-display-sm font-bold text-primary dark:text-inverse-primary tracking-tight">AL-MUSAFIR</a>
         <nav class="hidden md:flex items-center gap-8">
-            <a class="text-primary dark:text-inverse-primary border-b-2 border-secondary font-bold font-label-md text-label-md py-2"
-                href="#">Destinations</a>
-            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md py-2 transition-colors duration-300"
-                href="#">Packages</a>
-            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md py-2 transition-colors duration-300"
-                href="#">Transport</a>
-            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md py-2 transition-colors duration-300"
-                href="#">Hotels</a>
-            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md py-2 transition-colors duration-300"
-                href="#">Gallery</a>
-            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md py-2 transition-colors duration-300"
-                href="#">Contact</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md transition-colors duration-300"
+                href="pages/destinations.html">Destinations</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md transition-colors duration-300"
+                href="pages/packages.html">Packages</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md transition-colors duration-300"
+                href="pages/services.html">Transport</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md transition-colors duration-300"
+                href="pages/hotels.html">Hotels</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md transition-colors duration-300"
+                href="pages/gallery.html">Gallery</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md transition-colors duration-300"
+                href="pages/about.html">About</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md transition-colors duration-300"
+                href="pages/blog.html">Blog</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md transition-colors duration-300"
+                href="pages/faq.html">FAQ</a>
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary font-label-md text-label-md transition-colors duration-300"
+                href="pages/contact.html">Contact</a>
         </nav>
         <button
             class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3 btn-primary-hover transition-all duration-300">Book
             A Tour</button>
+        <button class="md:hidden p-2 text-primary" onclick="toggleSidebar()" aria-label="Toggle menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
     </header>
     <main>
         <!-- Hero Section -->
@@ -170,7 +178,7 @@
                 <div class="absolute inset-0 hero-gradient"></div>
             </div>
             <div class="relative z-10 text-center text-on-primary max-w-4xl px-margin-mobile">
-                <h1 class="font-display-lg text-display-lg mb-6 leading-tight">Explore Extraordinary Destinations With
+                <h1 class="font-display-lg text-display-lg max-md:text-[2.5rem] mb-6 leading-tight">Explore Extraordinary Destinations With
                     Confidence</h1>
                 <p class="font-body-lg text-body-lg mb-10 opacity-90">Premium travel experiences designed for comfort,
                     adventure, and unforgettable memories.</p>
@@ -187,7 +195,7 @@
         <!-- Statistics -->
         <section class="py-20 bg-surface">
             <div
-                class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
                 <div class="space-y-2 group">
                     <div class="font-display-sm text-display-sm text-primary tracking-tighter" id="stat-tours">500+
                     </div>
@@ -212,7 +220,7 @@
         </section>
         <!-- Featured Destinations (Bento Style) -->
         <section class="py-24 bg-surface-container-lowest">
-            <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="mb-16">
                     <h2 class="font-display-sm text-display-sm text-primary mb-4">Curated Destinations</h2>
                     <div class="w-16 h-1 bg-secondary"></div>
@@ -255,7 +263,7 @@
         <!-- Why Choose Us -->
         <section class="py-24 bg-primary text-on-primary overflow-hidden relative">
             <div
-                class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div>
                     <h2 class="font-display-sm text-display-sm mb-12">The Al-Musafir Standard</h2>
                     <div class="space-y-10">
@@ -299,7 +307,7 @@
         </section>
         <!-- Packages Section -->
         <section class="py-24 bg-surface">
-            <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="flex justify-between items-end mb-16">
                     <div>
                         <h2 class="font-display-sm text-display-sm text-primary mb-4">Elite Packages</h2>
@@ -418,7 +426,7 @@
                     data-alt="A wide-angle landscape of the snow-covered Nanga Parbat mountain peak at sunrise. The sky is a gradient of gold and deep navy. The scene is pristine, empty, and monumental. The lighting creates a high-contrast silhouette against the morning sky, symbolizing new beginnings and extraordinary travel journeys."
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmPmjUUV3fVtSdUBHQbAWGWFlh2qqST1FYvR6scemf3x0O243DFTYftmqUuCRiUD9NyU1LuXbyO3pA3mHIJcj-oMs9lVrU7u_-eni0UeReB55G3wV3VYRdbJJLT7xrBcpN6fs35CpxiqJDv1jo_ApKcviQuJH4inP8Y4ThEqaB3Wja0yEoJUKcfXIckF6HNrjBER4XwVrH3lsLEr0PuHoUsja0v-5jBsZ7QpTp7e3hd7r1oHVlB3DmbmTSh_TZZaMvlYCPquh1uhw" />
             </div>
-            <div class="relative z-10 max-w-container-max mx-auto px-margin-desktop text-center">
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
                 <h2 class="font-display-lg text-display-lg text-on-primary mb-8">Ready For Your Next Journey?</h2>
                 <p class="font-body-lg text-body-lg text-on-primary/80 mb-12 max-w-2xl mx-auto">Contact our concierge
                     today to begin designing your bespoke travel itinerary across Pakistan.</p>
@@ -431,7 +439,7 @@
     <!-- Footer -->
     <footer
         class="bg-primary dark:bg-tertiary-container text-on-primary dark:text-on-tertiary-container border-t-2 border-secondary">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
             <div class="space-y-6">
                 <div class="font-display-sm text-display-sm font-bold text-on-primary dark:text-on-tertiary-container">
                     AL-MUSAFIR</div>
@@ -471,7 +479,7 @@
             </div>
         </div>
         <div
-            class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="font-label-md text-label-md opacity-50">© 2024 Al-Musafir Luxury Travel. All Rights Reserved.</p>
             <div class="flex gap-6">
                 <span
@@ -537,6 +545,43 @@
         }, 5000);
         slider.style.transition = 'opacity 0.5s ease-in-out';
     </script>
+<!-- Mobile Sidebar -->
+<div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-[60] hidden" onclick="toggleSidebar()"></div>
+<div id="sidebar" class="fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-surface z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+  <div class="flex items-center justify-between p-4 border-b border-outline-variant">
+    <span class="font-display-sm text-xl font-bold text-primary">AL-MUSAFIR</span>
+    <button class="p-2 text-primary" onclick="toggleSidebar()" aria-label="Close menu">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  <nav class="flex flex-col p-6 gap-1">
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="pages/destinations.html">Destinations</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="pages/packages.html">Packages</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="pages/services.html">Transport</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="pages/hotels.html">Hotels</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="pages/gallery.html">Gallery</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="pages/about.html">About</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="pages/blog.html">Blog</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="pages/faq.html">FAQ</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="pages/contact.html">Contact</a>
+  </nav>
+</div>
+<script>
+function toggleSidebar() {
+  var overlay = document.getElementById('sidebarOverlay');
+  var sidebar = document.getElementById('sidebar');
+  var isOpen = !sidebar.classList.contains('translate-x-full');
+  if (isOpen) {
+    sidebar.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+    document.body.style.overflow = '';
+  } else {
+    sidebar.classList.remove('translate-x-full');
+    overlay.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+}
+</script>
 </body>
 
 </html>

@@ -130,26 +130,34 @@
 <body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
     <!-- TopNavBar -->
     <header
-        class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto z-50 bg-surface/95 backdrop-blur-md sticky top-0 border-b border-primary dark:border-outline-variant shadow-sm dark:shadow-none">
-        <a class="font-display-sm text-display-sm font-bold text-primary dark:text-inverse-primary tracking-tight"
-            href="#">AL-MUSAFIR</a>
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto z-50 bg-surface/95 backdrop-blur-md sticky top-0 border-b border-primary dark:border-outline-variant shadow-sm dark:shadow-none">
+        <a href="../index.html" class="font-display-sm text-display-sm font-bold text-primary dark:text-inverse-primary tracking-tight">AL-MUSAFIR</a>
         <nav class="hidden md:flex items-center gap-8">
             <a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300"
-                href="#">Destinations</a>
+                href="destinations.html">Destinations</a>
             <a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300"
-                href="#">Packages</a>
+                href="packages.html">Packages</a>
             <a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300"
-                href="#">Transport</a>
+                href="services.html">Transport</a>
             <a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300"
-                href="#">Hotels</a>
+                href="hotels.html">Hotels</a>
             <a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300"
-                href="#">Gallery</a>
+                href="gallery.html">Gallery</a>
+            <a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300"
+                href="about.html">About</a>
+            <a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300"
+                href="blog.html">Blog</a>
+            <a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300"
+                href="faq.html">FAQ</a>
             <a class="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-secondary font-bold"
-                href="#">Contact</a>
+                href="contact.html">Contact</a>
         </nav>
         <button
             class="bg-primary-container text-on-primary px-6 py-2.5 font-label-md text-label-md hover:bg-opacity-90 transition-all duration-300 border-b-0 hover:border-b-2 hover:border-secondary-fixed">
             Book A Tour
+        </button>
+        <button class="md:hidden p-2 text-primary" onclick="toggleSidebar()" aria-label="Toggle menu">
+          <span class="material-symbols-outlined">menu</span>
         </button>
     </header>
     <main>
@@ -160,13 +168,13 @@
                 <div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-background"></div>
             </div>
             <div class="relative z-10 text-center px-margin-mobile">
-                <h1 class="font-display-lg text-display-lg mb-4 text-primary">Connect With Us</h1>
+                <h1 class="font-display-lg text-display-lg max-md:text-[2.5rem] mb-4 text-primary">Connect With Us</h1>
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Our private concierges
                     are standing by to curate your next bespoke journey across the most exclusive landscapes.</p>
             </div>
         </section>
         <!-- Contact Content Grid -->
-        <section class="max-w-container-max mx-auto px-margin-desktop py-20">
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
                 <!-- Inquiry Form (8 columns) -->
                 <div class="lg:col-span-7 bg-white p-10 luxury-shadow border-t-2 border-secondary">
@@ -317,7 +325,7 @@
     </main>
     <!-- Footer -->
     <footer class="bg-primary dark:bg-tertiary-container border-t-2 border-secondary">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
             <div class="space-y-6">
                 <span
                     class="font-display-sm text-display-sm font-bold text-on-primary dark:text-on-tertiary-container">AL-MUSAFIR</span>
@@ -357,7 +365,7 @@
                     class="bg-secondary-fixed text-on-secondary-fixed px-6 py-2 font-label-md text-label-md uppercase tracking-widest hover:bg-opacity-90 transition-all">Subscribe</button>
             </div>
         </div>
-        <div class="border-t border-on-primary/10 py-8 text-center px-margin-desktop">
+        <div class="border-t border-on-primary/10 py-8 text-center px-margin-mobile md:px-margin-desktop">
             <p class="font-label-md text-label-md text-on-primary/60">© 2024 Al-Musafir Luxury Travel. All Rights
                 Reserved.</p>
         </div>
@@ -392,6 +400,43 @@
             observer.observe(section);
         });
     </script>
+<!-- Mobile Sidebar -->
+<div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-[60] hidden" onclick="toggleSidebar()"></div>
+<div id="sidebar" class="fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-surface z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+  <div class="flex items-center justify-between p-4 border-b border-outline-variant">
+    <span class="font-display-sm text-xl font-bold text-primary">AL-MUSAFIR</span>
+    <button class="p-2 text-primary" onclick="toggleSidebar()" aria-label="Close menu">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  <nav class="flex flex-col p-6 gap-1">
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="destinations.html">Destinations</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="packages.html">Packages</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="services.html">Transport</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="hotels.html">Hotels</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="gallery.html">Gallery</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="about.html">About</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="blog.html">Blog</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="faq.html">FAQ</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-primary font-bold bg-surface-container-low border-l-2 border-secondary transition-colors rounded" href="contact.html">Contact</a>
+  </nav>
+</div>
+<script>
+function toggleSidebar() {
+  var overlay = document.getElementById('sidebarOverlay');
+  var sidebar = document.getElementById('sidebar');
+  var isOpen = !sidebar.classList.contains('translate-x-full');
+  if (isOpen) {
+    sidebar.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+    document.body.style.overflow = '';
+  } else {
+    sidebar.classList.remove('translate-x-full');
+    overlay.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+}
+</script>
 </body>
 
 </html>

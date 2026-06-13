@@ -112,33 +112,39 @@
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
 <!-- Top Navigation -->
-<header class="bg-surface/95 backdrop-blur-md border-b border-primary dark:border-outline-variant flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto z-50 sticky top-0 shadow-sm">
-<div class="font-display-sm text-display-sm font-bold text-primary dark:text-inverse-primary">AL-MUSAFIR</div>
+<header class="bg-surface/95 backdrop-blur-md border-b border-primary dark:border-outline-variant flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto z-50 sticky top-0 shadow-sm">
+<a href="../index.html" class="font-display-sm text-display-sm font-bold text-primary dark:text-inverse-primary">AL-MUSAFIR</a>
 <nav class="hidden md:flex items-center gap-8">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Destinations</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Packages</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Transport</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Hotels</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gallery</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="destinations.html">Destinations</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="packages.html">Packages</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="services.html">Transport</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="hotels.html">Hotels</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-secondary font-bold" href="about.html">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="blog.html">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="faq.html">FAQ</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
 </nav>
 <button class="relative bg-primary-container text-on-primary px-8 py-3 font-label-md text-label-md uppercase btn-primary-hover overflow-hidden">
             Book A Tour
         </button>
+        <button class="md:hidden p-2 text-primary" onclick="toggleSidebar()" aria-label="Toggle menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
 </header>
 <main>
 <!-- Hero Section -->
-<section class="relative h-[614px] flex items-center justify-center overflow-hidden">
+<section class="relative min-h-[50vh] md:h-[614px] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 bg-primary/40 z-10"></div>
 <div class="absolute inset-0 w-full h-full bg-cover bg-center" data-alt="A cinematic panoramic shot of a serene mountain range at dawn, where the early morning mist clings to the peaks. The lighting is ethereal and soft, reflecting a high-end luxury travel aesthetic with a palette of deep navy and muted whites. The atmosphere is one of absolute quiet majesty and exclusive isolation, representing the pinnacle of bespoke exploration." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_TtBhsb69n0IFMa9H-z4Pgztl9BG7mcDPE-HIxCha2KW0nWV6xfvZmFbT8Sp4v8u0Keu4OiFNMRyK_grm4zd8rLcgXrzQRv35NDwZVibLKca9i2bwRCHhbGhAWKNbEW39YsBF_iLfCWTc4Z2_hk_jd_GIAGLH9yX-GDm1hFHqMTcPasgYK0BWvdRYKLapIOGmKWhEBxjuz_JFd1OcFaEM77miSSYYWXy7a0uOLTJZS8AuJO5Bw7tIfDHNRGOxUg3gMUM9TOZS0Nk')"></div>
 <div class="relative z-20 text-center px-margin-mobile max-w-3xl">
 <span class="font-label-md text-label-md text-secondary tracking-widest block mb-4 uppercase">Our Heritage</span>
-<h1 class="font-display-lg text-display-lg text-white mb-6">A Legacy of Excellence</h1>
+<h1 class="font-display-lg text-display-lg max-md:text-[2.5rem] text-white mb-6">A Legacy of Excellence</h1>
 <p class="text-white/90 font-body-lg text-body-lg">Curating unparalleled experiences for the world's most discerning travelers since 1994.</p>
 </div>
 </section>
 <!-- Company Story -->
-<section class="py-[120px] px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<section class="py-16 md:py-[120px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
 <div class="md:col-span-7 space-y-8">
 <div class="gold-border-left pl-6">
 <h2 class="font-display-sm text-display-sm text-primary mb-4">Crafting the Art of Travel</h2>
@@ -171,8 +177,8 @@
 </div>
 </section>
 <!-- Mission & Vision - Bento Layout -->
-<section class="bg-surface-container-low py-[120px]">
-<div class="px-margin-desktop max-w-container-max mx-auto">
+<section class="bg-surface-container-low py-16 md:py-[120px]">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- Mission -->
 <div class="bg-white p-12 border border-outline-variant hover-lift gold-border-top flex flex-col justify-between">
@@ -204,7 +210,7 @@
 </div>
 </section>
 <!-- Core Values -->
-<section class="py-[120px] px-margin-desktop max-w-container-max mx-auto text-center">
+<section class="py-16 md:py-[120px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
 <span class="font-label-md text-label-md text-secondary tracking-widest block mb-4 uppercase">The Pillars of AL-MUSAFIR</span>
 <h2 class="font-display-sm text-display-sm text-primary mb-16">Our Core Values</h2>
 <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-gutter">
@@ -241,8 +247,8 @@
 </div>
 </section>
 <!-- Leadership Team -->
-<section class="py-[120px] bg-surface-container">
-<div class="px-margin-desktop max-w-container-max mx-auto">
+<section class="py-16 md:py-[120px] bg-surface-container">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
 <div class="max-w-xl">
 <h2 class="font-display-sm text-display-sm text-primary mb-4">Elite Leadership</h2>
@@ -286,7 +292,7 @@
 </div>
 </section>
 <!-- Newsletter / CTA -->
-<section class="py-[120px] px-margin-desktop bg-primary text-white overflow-hidden relative">
+<section class="py-16 md:py-[120px] px-margin-mobile md:px-margin-desktop bg-primary text-white overflow-hidden relative">
 <div class="max-w-container-max mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 <div>
 <h2 class="font-display-lg text-headline-lg mb-6">Stay Informed</h2>
@@ -304,7 +310,7 @@
 </main>
 <!-- Footer -->
 <footer class="bg-primary border-t-2 border-secondary text-on-primary">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
 <div class="space-y-6">
 <div class="font-display-sm text-display-sm font-bold">AL-MUSAFIR</div>
 <p class="text-on-primary/60 text-sm">Setting the standard for luxury travel for over three decades.</p>
@@ -334,7 +340,7 @@
 </div>
 </div>
 </div>
-<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="border-t border-white/10 py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
 <p class="text-on-primary/40 font-label-md text-label-md">© 2024 Al-Musafir Luxury Travel. All Rights Reserved.</p>
 </div>
 </footer>
@@ -360,4 +366,43 @@
             });
         });
     </script>
-</body></html>
+<!-- Mobile Sidebar -->
+<div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-[60] hidden" onclick="toggleSidebar()"></div>
+<div id="sidebar" class="fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-surface z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+  <div class="flex items-center justify-between p-4 border-b border-outline-variant">
+    <span class="font-display-sm text-xl font-bold text-primary">AL-MUSAFIR</span>
+    <button class="p-2 text-primary" onclick="toggleSidebar()" aria-label="Close menu">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  <nav class="flex flex-col p-6 gap-1">
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="destinations.html">Destinations</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="packages.html">Packages</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="services.html">Transport</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="hotels.html">Hotels</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="gallery.html">Gallery</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-primary font-bold bg-surface-container-low border-l-2 border-secondary transition-colors rounded" href="about.html">About</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="blog.html">Blog</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="faq.html">FAQ</a>
+    <a class="block py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors rounded" href="contact.html">Contact</a>
+  </nav>
+</div>
+<script>
+function toggleSidebar() {
+  var overlay = document.getElementById('sidebarOverlay');
+  var sidebar = document.getElementById('sidebar');
+  var isOpen = !sidebar.classList.contains('translate-x-full');
+  if (isOpen) {
+    sidebar.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+    document.body.style.overflow = '';
+  } else {
+    sidebar.classList.remove('translate-x-full');
+    overlay.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+}
+</script>
+</body>
+
+</html>
